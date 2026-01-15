@@ -18,3 +18,38 @@
         transform: translateX(10px);
         transition: all 0.3s ease;
       }
+
+       .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            animation: marquee 30s linear infinite;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .marquee-content {
+    animation: marquee 20s linear infinite;
+  }
+  .marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
