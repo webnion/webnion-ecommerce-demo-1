@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>webnion -demo 2</title>
+    <title>webnion -demo 1</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 
     <link
@@ -13,8 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="./css/global.css">
-    <script src="./js/global.js"></script>
-    <script src="./js/categoryToggle.js"></script>
+
 </head>
 
 <body
@@ -53,42 +52,12 @@
             <div class="flex items-center space-x-8">
                 <!-- BROWSE CATEGORIES -->
                 <div class="relative group">
-                    <button onclick="toggleBrowse()"
+                    <button data-open="category"
                         class="bg-primary/10 dark:bg-primary/20 text-primary px-5 py-2.5 rounded-lg flex items-center space-x-3 font-semibold text-sm hover:bg-primary/20 transition-all">
                         <span class="material-icons-outlined text-lg">menu</span>
                         <span>CATEGORIES</span>
                         <span class="material-icons-outlined text-sm">expand_more</span>
                     </button>
-                    <!-- BROWSE DROPDOWN -->
-                    <div id="browseMenu"
-                        class="absolute left-0 top-full z-50  w-64 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg shadow-lg hidden xl:group-hover:block">
-                        <!-- MOBILE EXTRA MENUS -->
-                        <div class="xl:hidden border-b dark:border-gray-700 mb-2">
-                            <!-- Mobile Shop -->
-                            <div>
-                                <button onclick="toggleSub('shopSub')"
-                                    class="w-full px-4 py-2 flex justify-between items-center">
-                                    Shop
-                                    <span class="material-icons-outlined text-sm">expand_more</span>
-                                </button>
-                                <div id="shopSub" class="hidden pl-8 pb-2">
-                                    <p class="py-1">Men</p>
-                                    <p class="py-1">Women</p>
-                                    <p class="py-1">Children</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Categories -->
-                        <p class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">
-                            Electronics
-                        </p>
-                        <p class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">
-                            Fashion
-                        </p>
-                        <p class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">
-                            Home & Kitchen
-                        </p>
-                    </div>
                 </div>
                 <!-- DESKTOP MENU -->
                 <ul class="hidden xl:flex items-center space-x-6 text-sm font-medium text-gray-600 dark:text-gray-300">
@@ -482,33 +451,498 @@
     <!-- marque section stop  -->
 
 
+    <!-- product section start -->
+    <section class="max-w-7xl mx-auto px-4 py-12 md:py-20">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Most Popular Products</h2>
+            <div
+                class="flex items-center p-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full overflow-x-auto no-scrollbar whitespace-nowrap">
+                <button data-filter="All"
+                    class="px-6 py-2 rounded-full text-sm font-semibold bg-primary text-white transition-all">
+                    All
+                </button>
+
+                <button data-filter="Dresses"
+                    class="px-6 py-2 rounded-full text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary transition-all">
+                    Dresses
+                </button>
+
+                <button data-filter="Tops"
+                    class="px-6 py-2 rounded-full text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary transition-all">
+                    Tops
+                </button>
+
+                <button data-filter="Outerwear"
+                    class="px-6 py-2 rounded-full text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary transition-all">
+                    Outerwear
+                </button>
+
+                <button data-filter="Jacket"
+                    class="px-6 py-2 rounded-full text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary transition-all">
+                    Jacket
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+            <div class="group relative flex flex-col cursor-pointer" data-category="Tops">
+                <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#8B5CF6]/20">
+                    <img alt="Cozy Knit Cardigan"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="./image/product/product-12.png" />
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+                            20% Off</span>
+                    </div>
+                    <div class="absolute top-4 right-4 flex flex-col gap-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <button
+                            class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">Quick
+                            View</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Cozy Knit
+                        Cardigan<br />Sweater</h3>
+                    <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+                </div>
+            </div>
+            <div class="group relative flex flex-col cursor-pointer" data-category="Dresses">
+                <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#D97706]/20">
+                    <img alt="Sophisticated Swagger Suit"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="./image/product/product-11.png" />
+                    <div class="absolute top-4 left-4"><span
+                            class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+                            20% Off</span></div>
+                    <div class="absolute top-4 right-4 flex flex-col gap-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <button
+                            class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">Quick
+                            View</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
+                        Sophisticated<br />Swagger Suit</h3>
+                    <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+                </div>
+            </div>
+            <div class="group relative flex flex-col cursor-pointer" data-category="Outerwear">
+                <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#3B82F6]/20">
+                    <img alt="Classic Denim Skinny Jeans"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="./image/product/product-10.png" />
+                    <div class="absolute top-4 left-4"><span
+                            class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+                            20% Off</span></div>
+                    <div class="absolute top-4 right-4 flex flex-col gap-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <button
+                            class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">Quick
+                            View</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Classic Denim
+                        Skinny<br />Jeans</h3>
+                    <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+                </div>
+            </div>
+            <div class="group relative flex flex-col cursor-pointer" data-category="Jacket">
+                <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#EF4444]/20">
+                    <img alt="Athletic Mesh Sports Leggings"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="./image/product/product-9.png" />
+                    <div class="absolute top-4 left-4"><span
+                            class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+                            20% Off</span></div>
+                    <div class="absolute top-4 right-4 flex flex-col gap-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <button
+                            class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">Quick
+                            View</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Athletic Mesh
+                        Sports<br />Leggings</h3>
+                    <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+                </div>
+            </div>
+            <div class="group relative flex flex-col cursor-pointer" data-category="Jacket">
+                <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#94A3B8]/20">
+                    <img alt="Vintage Denim Overalls"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="./image/product/product-8.png" />
+                    <div class="absolute top-4 left-4"><span
+                            class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+                            20% Off</span></div>
+                    <div class="absolute top-4 right-4 flex flex-col gap-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <button
+                            class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">Quick
+                            View</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Vintage
+                        Denim<br />Overalls Shorts</h3>
+                    <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+                </div>
+            </div>
+            <div class="group relative flex flex-col cursor-pointer" data-category="Tops">
+                <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#F472B6]/20">
+                    <img alt="Satin Wrap Party Blouse"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="./image/product/product-7.png" />
+                    <div class="absolute top-4 left-4"><span
+                            class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+                            20% Off</span></div>
+                    <div class="absolute top-4 right-4 flex flex-col gap-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <button
+                            class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">Quick
+                            View</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Satin Wrap
+                        Party<br />Blouse</h3>
+                    <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+                </div>
+            </div>
+            <div class="group relative flex flex-col cursor-pointer" data-category="Dresses">
+                <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#A8A29E]/20">
+                    <img alt="Plaid Wool Winter Coat"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="./image/product/product-6.png" />
+                    <div class="absolute top-4 left-4"><span
+                            class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+                            20% Off</span></div>
+                    <div class="absolute top-4 right-4 flex flex-col gap-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <button
+                            class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">Quick
+                            View</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Plaid Wool
+                        Winter<br />Coat</h3>
+                    <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+                </div>
+            </div>
+            <div class="group relative flex flex-col cursor-pointer" data-category="Outerwear">
+                <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#FBBF24]/20">
+                    <img alt="Water-Resistant Windbreaker"
+                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="./image/product/product-5.png" />
+                    <div class="absolute top-4 left-4"><span
+                            class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+                            20% Off</span></div>
+                    <div class="absolute top-4 right-4 flex flex-col gap-2">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <button
+                            class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">Quick
+                            View</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
+                        Water-Resistant<br />Windbreaker Jacket</h3>
+                    <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 flex justify-center">
+            <button
+                class="px-12 py-4 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all duration-300">
+                Show More
+            </button>
+        </div>
+    </section>
+   <!-- product section stop -->
+
+    <!-- blog section start -->
 
 
 
 
-<!-- mobile navbar  -->
- <section class=" xl:hidden fixed z-50 bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800  pb-4 pt-3 px-4 flex justify-between items-center">
-<button class="flex flex-col items-center justify-center w-full group">
-<span class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">menu</span>
-<span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Category</span>
-</button>
-<button class="flex flex-col items-center justify-center w-full group">
-<span class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">chat_bubble_outline</span>
-<span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Message</span>
-</button>
-<button class="flex flex-col items-center justify-center w-full">
-<span class="material-icons text-primary">home</span>
-<span class="text-[10px] mt-1 font-semibold text-primary">Home</span>
-</button>
-<button class="flex flex-col items-center justify-center w-full group relative">
-<span class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">shopping_cart</span>
-<span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Cart (0)</span>
-</button>
-<button class="flex flex-col items-center justify-center w-full group">
-<span class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">person_outline</span>
-<span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Login</span>
-</button>
-</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================== MOBILE BOTTOM NAV ================== -->
+    <section
+        class="xl:hidden fixed z-50 bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 pb-4 pt-3 px-4 flex justify-between items-center">
+        <button data-open="category" class="catOpenBtn flex flex-col items-center justify-center w-full group">
+            <span
+                class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">menu</span>
+            <span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Category</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center w-full group">
+            <span
+                class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">chat_bubble_outline</span>
+            <span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Message</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center w-full">
+            <span class="material-icons text-primary">home</span>
+            <span class="text-[10px] mt-1 font-semibold text-primary">Home</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center w-full group relative">
+            <span
+                class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">shopping_cart</span>
+            <span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Cart (0)</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center w-full group">
+            <span
+                class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">person_outline</span>
+            <span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Login</span>
+        </button>
+    </section>
+    <!-- ================== MOBILE BOTTOM NAV END ================== -->
+
+
+    <!-- ================== BACKDROP ================== -->
+    <div id="appBackdrop" class="fixed inset-0 z-50 hidden bg-black/40" aria-hidden="true"></div>
+
+    <!-- ================== CATEGORY DRAWER ================== -->
+    <section id="catDrawer" data-drawer="category" class="fixed z-50 hidden bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800
+         left-0 bottom-0 w-9/12 sm:w-1/2 md:w-1/3 lg:w-1/4
+         max-h-[90vh] flex flex-col rounded-t-2xl
+         xl:top-0 xl:bottom-0 xl:max-h-screen xl:rounded-none xl:border-r" role="dialog" aria-modal="true">
+
+        <!-- Header -->
+        <div class="px-4 pt-4 pb-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img src="./image/logo.png" alt="Logo" class="h-7 w-auto" />
+                <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Categories</h2>
+            </div>
+
+            <button data-close class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+                aria-label="Close">
+                <span class="material-icons text-gray-600 dark:text-gray-300">close</span>
+            </button>
+        </div>
+
+        <!-- Body -->
+        <div class="px-4 pb-5 overflow-y-auto flex-1">
+            <ul class="space-y-2" id="catTree">
+
+                <!-- Level 1 -->
+                <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                        data-toggle="lvl1" aria-expanded="false">
+                        <span class="font-medium">Electronics</span>
+                        <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                    </button>
+
+                    <!-- Level 2 container -->
+                    <div class="hidden" data-panel="lvl1">
+                        <ul class="p-2 space-y-2">
+
+                            <!-- Level 2 -->
+                            <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                                    data-toggle="lvl2" aria-expanded="false">
+                                    <span class="font-medium">Mobile</span>
+                                    <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                                </button>
+
+                                <!-- Level 3 container -->
+                                <div class="hidden" data-panel="lvl2">
+                                    <ul class="p-2 space-y-2">
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                Android Phones
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                iPhone
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Another Level 2 -->
+                            <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                                    data-toggle="lvl2b" aria-expanded="false">
+                                    <span class="font-medium">Laptop</span>
+                                    <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                                </button>
+
+                                <div class="hidden" data-panel="lvl2b">
+                                    <ul class="p-2 space-y-2">
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                Gaming Laptop
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                Ultrabook
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Another Level 1 -->
+                <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                        data-toggle="fashion1" aria-expanded="false">
+                        <span class="font-medium">Fashion</span>
+                        <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                    </button>
+
+                    <div class="hidden" data-panel="fashion1">
+                        <ul class="p-2 space-y-2">
+                            <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                                    data-toggle="fashion2" aria-expanded="false">
+                                    <span class="font-medium">Men</span>
+                                    <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                                </button>
+
+                                <div class="hidden" data-panel="fashion2">
+                                    <ul class="p-2 space-y-2">
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                T-Shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                Jeans
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================== SCRIPT ================== -->
+
+    <script src="./js/home.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/categoryToggle.js"></script>
 </body>
 
 </html>
