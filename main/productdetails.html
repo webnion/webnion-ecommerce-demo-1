@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>webnion -demo 1</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/productdetails.css">
+
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-secondary dark:text-gray-100 transition-colors duration-200">
+    <header class="bg-primary py-4 px-6 md:px-12 flex flex-wrap items-center justify-between gap-4">
+        <a href="../index.html" class="flex items-center space-x-2 cursor-pointer">
+            <div class="bg-white p-1 rounded-lg">
+                <span class="material-icons-outlined text-primary text-3xl">bolt</span>
+            </div>
+            <span class="text-white text-3xl font-extrabold tracking-tight">Webnion</span>
+        </a>
+        <div class="flex-grow max-w-2xl bg-white dark:bg-gray-800 rounded-full flex items-center px-4 py-1 shadow-sm">
+            <div class="hidden md:flex items-center border-r border-gray-200 dark:border-gray-700 pr-4 mr-4">
+                <span class="text-sm font-medium text-gray-500 dark:text-gray-400">All Categories</span>
+            </div>
+            <input class="flex-grow bg-transparent border-none focus:ring-0 text-sm py-2 dark:text-white"
+                placeholder="Search for products..." type="text" />
+            <button class="text-gray-400 hover:text-primary transition-colors">
+                <span class="material-icons-outlined">search</span>
+            </button>
+        </div>
+        <div class="hidden lg:flex items-center space-x-3 text-white">
+            <div class="bg-white/20 p-2 rounded-full">
+                <span class="material-icons-outlined">headset_mic</span>
+            </div>
+            <div>
+                <p class="text-[10px] uppercase font-bold tracking-wider opacity-80">24/7 Support</p>
+                <p class="text-sm font-bold">+123 456 789</p>
+            </div>
+        </div>
+    </header>
+    <nav
+        class="xl:sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 px-2 md:px-12 py-3">
+        <div class="flex items-center justify-between">
+            <!-- LEFT -->
+            <div class="flex items-center space-x-8">
+                <!-- BROWSE CATEGORIES -->
+                <div class="relative group">
+                    <button data-open="category"
+                        class="bg-primary/10 dark:bg-primary/20 text-primary px-5 py-2.5 rounded-lg flex items-center space-x-3 font-semibold text-sm hover:bg-primary/20 transition-all">
+                        <span class="material-icons-outlined text-lg">menu</span>
+                        <span>CATEGORIES</span>
+                        <span class="material-icons-outlined text-sm">expand_more</span>
+                    </button>
+                </div>
+                <!-- DESKTOP MENU -->
+                <ul class="hidden xl:flex items-center space-x-6 text-sm font-medium text-gray-600 dark:text-gray-300">
+                    <li class="hover:text-primary cursor-pointer"><a href="../index.html">Home</a></li>
+
+                    <!-- SHOP WITH SUBMENU -->
+                    <li class="relative group cursor-pointer">
+                        <a href="./product.html">
+                            <span class="flex items-center hover:text-primary">
+                                All product
+                                <span class="material-icons-outlined text-[10px] ml-1">add</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="relative group cursor-pointer">
+                        <a href="./productdetails.html">
+                            <span class="flex items-center hover:text-primary">
+                                product details
+                                <span class="material-icons-outlined text-[10px] ml-1">add</span>
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- RIGHT (FIXED) -->
+            <div class="flex items-center space-x-5 text-gray-600 dark:text-gray-300">
+                <button class="hover:text-primary transition-colors">
+                    <span class="material-icons-outlined">favorite_border</span>
+                </button>
+
+                <button class="relative hover:text-primary transition-colors">
+                    <span class="material-icons-outlined">shopping_cart</span>
+                    <span
+                        class="absolute -top-2 -right-2 bg-accent-red text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                        5
+                    </span>
+                </button>
+
+                <button class="hover:text-primary transition-colors"
+                    onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-icons-outlined dark:hidden">dark_mode</span>
+                    <span class="material-icons-outlined hidden dark:block">
+                        light_mode
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar stop  -->
+    <!-- banner for all page start -->
+    <header class="relative w-full overflow-hidden">
+        <div class="mx-auto max-w-7xl">
+            <div class="relative h-[250px] md:h-[320px] lg:h-[400px] w-full overflow-hidden shadow-2xl">
+                <img alt="Fashion model with sunglasses lifestyle shot"
+                    class="absolute inset-0 w-full h-full object-cover object-center" src="../image/banner.png" />
+                <div class="absolute inset-0 hero-overlay flex flex-col items-center justify-center text-center px-4">
+                    <div class="animate-fadeIn">
+                        <h1
+                            class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4 drop-shadow-sm">
+                            Shop with webnion
+                        </h1>
+                        <nav aria-label="Breadcrumb"
+                            class="flex items-center justify-center space-x-2 text-sm md:text-base font-medium text-white/90">
+                            <a class="hover:text-white transition-colors" href="../index.html">Home</a>
+                            <span class="material-icons text-sm md:text-lg opacity-60">chevron_right</span>
+                            <span class="text-white">Webnion shop details</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- banner for all page stop -->
+
+    <!-- main section for product details start -->
+    <div class="max-w-7xl mx-auto px-4 py-8 md:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="space-y-6">
+                <!-- Main Image -->
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 dark:bg-slate-800">
+                    <img id="mainImage" alt="Main view of Curly Girl Beautiful Dress"
+                        class="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110"
+                        src="../image/product/p-details-1.png" />
+
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="swiper thumbSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <button
+                                class="relative rounded-xl overflow-hidden aspect-square active-thumb ring-offset-2 ring-primary transition-all w-full"
+                                data-image="../image/product/p-details-1.png">
+                                <img class="w-full h-full object-cover" src="../image/product/p-details-1.png" />
+                            </button>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <button
+                                class="relative rounded-xl overflow-hidden aspect-square border-2 border-transparent hover:border-primary/50 transition-all w-full"
+                                data-image="../image/product/p-details-2.png">
+                                <img class="w-full h-full object-cover" src="../image/product/p-details-2.png" />
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button
+                                class="relative rounded-xl overflow-hidden aspect-square border-2 border-transparent hover:border-primary/50 transition-all w-full"
+                                data-image="../image/product/p-details-2.png">
+                                <img class="w-full h-full object-cover" src="../image/product/p-details-2.png" />
+                            </button>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <button
+                                class="relative rounded-xl overflow-hidden aspect-square border-2 border-transparent hover:border-primary/50 transition-all w-full"
+                                data-image="../image/product/p-details-3.png">
+                                <img class="w-full h-full object-cover" src="../image/product/p-details-3.png" />
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Prev -->
+                    <button class="thumb-prev absolute -left-4 top-1/2 -translate-y-1/2 z-10
+           w-9 h-9 rounded-full bg-white dark:bg-slate-900
+           shadow flex items-center justify-center
+           text-slate-700 hover:text-primary transition">
+                        ‹
+                    </button>
+
+                    <!-- Next -->
+                    <button class="thumb-next absolute -right-4 top-1/2 -translate-y-1/2 z-10
+           w-9 h-9 rounded-full bg-white dark:bg-slate-900
+           shadow flex items-center justify-center
+           text-slate-700 hover:text-primary transition">
+                        ›
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="inline-block">
+                    <span
+                        class="bg-black dark:bg-white text-white dark:text-black text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">
+                        SALE 20% OFF
+                    </span>
+                </div>
+                <h1 class="mt-6 text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+                    Curly Girl Beautiful Dress
+                </h1>
+                <div class="mt-4 flex items-center gap-4">
+                    <div class="flex items-center text-primary">
+                        <span class="material-icons text-xl">star</span>
+                        <span class="material-icons text-xl">star</span>
+                        <span class="material-icons text-xl">star</span>
+                        <span class="material-icons text-xl">star</span>
+                        <span class="material-icons text-xl text-slate-300 dark:text-slate-600">star</span>
+                    </div>
+                    <span class="text-slate-500 dark:text-slate-400 text-sm font-medium">4.7 Rating (5 customer
+                        reviews)</span>
+                </div>
+                <div class="mt-8 space-y-6">
+                    <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+                        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+                <div
+                    class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-slate-200 dark:border-slate-800 pt-10">
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase mb-4 tracking-wide">
+                            Quantity</h3>
+                        <div class="flex items-center gap-4">
+                            <button
+                                class="w-10 h-10 rounded-full bg-black dark:bg-slate-700 text-white flex items-center justify-center hover:bg-slate-800 dark:hover:bg-slate-600 transition-colors">
+                                <span class="material-icons">remove</span>
+                            </button>
+                            <div
+                                class="w-16 h-10 border border-slate-300 dark:border-slate-700 rounded-lg flex items-center justify-center font-medium bg-white dark:bg-slate-800">
+                                1
+                            </div>
+                            <button
+                                class="w-10 h-10 rounded-full bg-black dark:bg-slate-700 text-white flex items-center justify-center hover:bg-slate-800 dark:hover:bg-slate-600 transition-colors">
+                                <span class="material-icons">add</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase mb-4 tracking-wide">Size
+                        </h3>
+                        <div class="flex items-center gap-3">
+                            <button
+                                class="w-10 h-10 rounded-full bg-black dark:bg-white text-white dark:text-black font-medium text-sm flex items-center justify-center border border-transparent">S</button>
+                            <button
+                                class="w-10 h-10 rounded-full border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-300 hover:border-black dark:hover:border-white font-medium text-sm flex items-center justify-center transition-all">M</button>
+                            <button
+                                class="w-10 h-10 rounded-full border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-slate-300 hover:border-black dark:hover:border-white font-medium text-sm flex items-center justify-center transition-all">L</button>
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase mb-4 tracking-wide">Color
+                        </h3>
+                        <div class="flex items-center gap-5">
+                            <button
+                                class="w-6 h-6 rounded-full bg-slate-800 dark:bg-slate-600 color-swatch-ring"></button>
+                            <button
+                                class="w-6 h-6 rounded-full bg-blue-400 hover:scale-110 transition-transform"></button>
+                            <button
+                                class="w-6 h-6 rounded-full bg-emerald-600 hover:scale-110 transition-transform"></button>
+                            <button
+                                class="w-6 h-6 rounded-full bg-pink-200 hover:scale-110 transition-transform"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 pt-10 border-t border-slate-200 dark:border-slate-800 space-y-4">
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        <span class="font-bold text-slate-900 dark:text-white">SKU:</span> PRT584E63A
+                    </p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        <span class="font-bold text-slate-900 dark:text-white">Category:</span>
+                        <a class="hover:text-primary transition-colors ml-1" href="#">Dresses</a>,
+                        <a class="hover:text-primary transition-colors" href="#">Jeans</a>,
+                        <a class="hover:text-primary transition-colors" href="#">Swimwear</a>,
+                        <a class="hover:text-primary transition-colors" href="#">Summer</a>,
+                        <a class="hover:text-primary transition-colors" href="#">Clothing</a>
+                    </p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        <span class="font-bold text-slate-900 dark:text-white">Tags:</span>
+                        <a class="hover:text-primary transition-colors ml-1" href="#">Casual</a>,
+                        <a class="hover:text-primary transition-colors" href="#">Athletic</a>,
+                        <a class="hover:text-primary transition-colors" href="#">Workwear</a>,
+                        <a class="hover:text-primary transition-colors" href="#">Accessories</a>
+                    </p>
+                    <div class="flex items-center gap-4 pt-4">
+                        <span class="font-bold text-sm text-slate-900 dark:text-white">Share:</span>
+                        <div class="flex gap-4">
+                            <a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-2.21c0-.837.39-1.79 1.816-1.79h2.184v-3.864c0 0-1.98-.336-3.877-.336-3.954 0-6.522 2.27-6.522 6.632v1.568z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <button
+                        class="w-full sm:w-auto px-12 py-4 bg-primary text-white font-bold rounded-xl hover:bg-emerald-600 transition-all transform active:scale-95 shadow-lg shadow-emerald-200 dark:shadow-none uppercase tracking-widest">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main section for product details stop -->
+    <!-- product details vendor product review section start -->
+    <div class="max-w-4xl mx-auto py-8">
+        <div
+            class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+            <div class="px-6 pt-6 overflow-x-auto custom-scrollbar">
+                <div class="flex space-x-2 md:space-x-4 border-b border-gray-100 dark:border-gray-700 pb-px">
+                    <button data-tab="details-text"
+                        class="tab-btn px-6 py-2.5 text-sm font-medium rounded-t-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors whitespace-nowrap">
+                        Detail
+                    </button>
+
+                    <button data-tab="specification-text"
+                        class="tab-btn px-6 py-2.5 text-sm font-medium rounded-t-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors whitespace-nowrap">
+                        Specifications
+                    </button>
+
+                    <button data-tab="vendor-text"
+                        class="tab-btn px-6 py-2.5 text-sm font-medium rounded-t-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors whitespace-nowrap">
+                        Vendor
+                    </button>
+
+                    <button data-tab="review-text"
+                        class="tab-btn px-6 py-2.5 text-sm font-medium rounded-t-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors whitespace-nowrap">
+                        Reviews
+                    </button>
+                </div>
+            </div>
+
+            <!-- details text start -->
+            <div id="details-text" class="p-6 md:p-8">
+                <div class="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-2 w-2 rounded-full bg-primary mt-2 mr-3"></span>
+                            <span>Any Product types that You want - Simple, Configurable</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-2 w-2 rounded-full bg-primary mt-2 mr-3"></span>
+                            <span>Downloadable/Digital Products, Virtual Products</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-2 w-2 rounded-full bg-primary mt-2 mr-3"></span>
+                            <span>Inventory Management with Backordered items</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-2 w-2 rounded-full bg-primary mt-2 mr-3"></span>
+                            <span>Flatlock seams throughout.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the
+                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on
+                        the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
+                        sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum
+                        is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                    </p>
+                </div>
+            </div>
+            <!-- details text stop -->
+
+            <!-- specification text start -->
+            <div id="specification-text" class="p-6 md:p-8 hidden">
+                <div class="mb-8">
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm md:text-base max-w-4xl">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                    </p>
+                </div>
+                <div class="space-y-4 max-w-2xl">
+                    <div class="flex items-start">
+                        <div class="mt-1.5 mr-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 w-full">
+                            <span class="text-gray-900 dark:text-gray-100 font-bold text-sm md:text-base">Model</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm md:text-base">SKU140</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mt-1.5 mr-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 w-full">
+                            <span class="text-gray-900 dark:text-gray-100 font-bold text-sm md:text-base">Weight</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm md:text-base">500 g</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mt-1.5 mr-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 w-full">
+                            <span
+                                class="text-gray-900 dark:text-gray-100 font-bold text-sm md:text-base">Dimensions</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm md:text-base">35 × 30 × 7 cm</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mt-1.5 mr-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 w-full">
+                            <span class="text-gray-900 dark:text-gray-100 font-bold text-sm md:text-base">Color</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm md:text-base">Black, Pink, Red,
+                                White</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mt-1.5 mr-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 w-full">
+                            <span class="text-gray-900 dark:text-gray-100 font-bold text-sm md:text-base">Size</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm md:text-base">10 X 20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- specification text stop -->
+            <!-- vendor section start -->
+            <div id="vendor-text" class="p-6 md:p-8 hidden">
+                <div class="flex flex-col sm:flex-row items-start gap-6 mb-8">
+                    <div
+                        class="w-24 h-24 flex-shrink-0 border border-gray-200 dark:border-gray-700 rounded-lg p-2 bg-gray-50 dark:bg-gray-900 flex items-center justify-center overflow-hidden">
+                        <div class="relative w-full h-full">
+                            <svg class="w-full h-full opacity-90" fill="none" viewBox="0 0 100 100"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50 10L90 35V65L50 90L10 65V35L50 10Z" fill="#FBBF24"></path>
+                                <circle cx="50" cy="50" fill="#EF4444" r="25"></circle>
+                                <path d="M20 40C20 40 40 20 50 50C60 80 80 60 80 60" stroke="#0EA5E9"
+                                    stroke-linecap="round" stroke-width="8"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Ocean Crate</h2>
+                        <div class="flex flex-wrap gap-x-6 gap-y-1">
+                            <p class="text-sm text-gray-500 dark:text-gray-400">
+                                <span class="font-medium">Products :</span> 358
+                            </p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">
+                                <span class="font-medium">Sales :</span> 5587
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4 mb-8">
+                    <div class="flex flex-col sm:flex-row sm:items-center">
+                        <div class="flex items-center w-40 mb-1 sm:mb-0">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary mr-3"></span>
+                            <span class="font-bold text-gray-800 dark:text-gray-200">Phone No. :</span>
+                        </div>
+                        <span class="text-gray-600 dark:text-gray-400">+00 987654321</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center">
+                        <div class="flex items-center w-40 mb-1 sm:mb-0">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary mr-3"></span>
+                            <span class="font-bold text-gray-800 dark:text-gray-200">Email. :</span>
+                        </div>
+                        <span class="text-gray-600 dark:text-gray-400">Example@gmail.com</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-start">
+                        <div class="flex items-center w-40 flex-shrink-0 mb-1 sm:mb-0 mt-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary mr-3"></span>
+                            <span class="font-bold text-gray-800 dark:text-gray-200">Address. :</span>
+                        </div>
+                        <span class="text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
+                            2548 Broaddus Maple Court, Madisonville KY 4783, USA.
+                        </span>
+                    </div>
+                </div>
+                <div class="border-t border-gray-100 dark:border-gray-700 pt-8">
+                    <p class="text-gray-600 dark:text-gray-400 leading-7 text-sm md:text-base">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+            </div>
+            <!-- vendor section stop -->
+
+            <!-- text for review start -->
+            <div id="review-text" class="p-6 md:p-8 hidden">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <img alt="Mariya Lykra avatar"
+                            class="w-12 h-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-gray-700"
+                            src="../image/review-1.png" />
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-900 dark:text-white">Mariya Lykra</h4>
+                            <div class="flex items-center mt-1 text-primary">
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined text-gray-300 dark:text-gray-600">star</span>
+                            </div>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="border-gray-100 dark:border-gray-700" />
+                    <div class="flex items-start space-x-4">
+                        <img alt="Moris Willson avatar"
+                            class="w-12 h-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-gray-700"
+                            src="../image/card-2.png" />
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-900 dark:text-white">Moris Willson</h4>
+                            <div class="flex items-center mt-1 text-primary">
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined text-gray-300 dark:text-gray-600">star</span>
+                                <span class="material-icons-outlined text-gray-300 dark:text-gray-600">star</span>
+                            </div>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 pt-8 border-t border-gray-100 dark:border-gray-700">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Add a Review</h3>
+                    <form action="#" class="space-y-6" method="POST">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Your rating:</span>
+                            <div class="flex items-center text-primary star-rating">
+                                <button class="hover:scale-110 transition-transform" type="button"><span
+                                        class="material-icons-outlined">star</span></button>
+                                <button class="hover:scale-110 transition-transform" type="button"><span
+                                        class="material-icons-outlined">star</span></button>
+                                <button class="hover:scale-110 transition-transform" type="button"><span
+                                        class="material-icons-outlined text-gray-300 dark:text-gray-600">star</span></button>
+                                <button class="hover:scale-110 transition-transform" type="button"><span
+                                        class="material-icons-outlined text-gray-300 dark:text-gray-600">star</span></button>
+                                <button class="hover:scale-110 transition-transform" type="button"><span
+                                        class="material-icons-outlined text-gray-300 dark:text-gray-600">star</span></button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 gap-6">
+                            <div>
+                                <input
+                                    class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md focus:ring-primary focus:border-primary text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition-colors"
+                                    placeholder="Name" type="text" />
+                            </div>
+                            <div>
+                                <input
+                                    class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md focus:ring-primary focus:border-primary text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition-colors"
+                                    placeholder="Email*" required="" type="email" />
+                            </div>
+                            <div>
+                                <textarea
+                                    class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md focus:ring-primary focus:border-primary text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition-colors resize-none"
+                                    placeholder="Enter Your Comment" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <button
+                                class="inline-flex justify-center py-2.5 px-10 border border-transparent shadow-sm text-sm font-semibold rounded-md text-white bg-primary hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all active:scale-95"
+                                type="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- text for review stop -->
+
+
+
+
+
+
+        </div>
+    </div>
+    <!-- product details vendor product review section stop -->
+
+    <!-- related product section start -->
+    <section class="max-w-7xl mx-auto px-4 py-16 lg:py-20 sm:px-6 lg:px-8 border border-b-black">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                    Related Product
+                </h2>
+            </div>
+            <a class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-full shadow-sm text-white bg-black hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition-all duration-200 uppercase tracking-wider"
+                href="#">
+                View All
+            </a>
+        </div>
+<div class="swiper productSwiper">
+  <div class="swiper-wrapper">
+
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#D97706]/20">
+          <img alt="Sophisticated Swagger Suit"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-11.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button  class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
+            Sophisticated<br />Swagger Suit</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#3B82F6]/20">
+          <img alt="Classic Denim Skinny Jeans"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-10.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Classic Denim
+            Skinny<br />Jeans</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#D97706]/20">
+          <img alt="Sophisticated Swagger Suit"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-11.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
+            Sophisticated<br />Swagger Suit</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#EF4444]/20">
+          <img alt="Athletic Mesh Sports Leggings"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-9.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Athletic Mesh
+            Sports<br />Leggings</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#94A3B8]/20">
+          <img alt="Vintage Denim Overalls"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-8.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Vintage
+            Denim<br />Overalls Shorts</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    </section>
+    <!-- related product section stop -->
+
+
+
+
+
+    <!-- using all page -->
+    <!-- footer start -->
+
+    <footer class="bg-white dark:bg-gray-950 transition-colors duration-300">
+        <div class=" flex flex-col justify-end">
+            <div
+                class="bg-background-light dark:bg-background-dark pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+                        <div class="lg:col-span-1 flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary text-3xl">W</span>
+                                </div>
+                                <span class="font-display text-2xl font-bold text-heading-light dark:text-heading-dark">
+                                    web <span class="text-primary">nion</span>
+                                </span>
+                            </div>
+                            <p class="text-footer-text-light dark:text-footer-text-dark leading-relaxed mb-8 max-w-xs">
+                                Webnion is the biggest market of grocery products. Get your daily needs from our
+                                store.
+                            </p>
+                            <div class="flex flex-col sm:flex-row lg:flex-col gap-3 w-full sm:w-auto">
+                                <a class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors"
+                                    href="#">
+                                    <span class="material-symbols-outlined">play_arrow</span>
+                                    <div class="text-left">
+                                        <p class="text-[10px] uppercase leading-none">Get it on</p>
+                                        <p class="text-sm font-semibold leading-none mt-1">Google Play</p>
+                                    </div>
+                                </a>
+                                <a class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors"
+                                    href="#">
+                                    <span class="material-symbols-outlined">phone_iphone</span>
+                                    <div class="text-left">
+                                        <p class="text-[10px] uppercase leading-none">Download on the</p>
+                                        <p class="text-sm font-semibold leading-none mt-1">App Store</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <h4
+                                class="font-display text-lg font-bold text-heading-light dark:text-heading-dark mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 lg:after:left-0 lg:after:translate-x-0 after:w-10 after:h-1 after:bg-primary/20 after:rounded-full">
+                                Category</h4>
+                            <ul class="space-y-4">
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Dairy &amp; Milk</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Snack &amp; Spice</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Fast Food</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Juice &amp; Drinks</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Bakery</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Seafood</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <h4
+                                class="font-display text-lg font-bold text-heading-light dark:text-heading-dark mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 lg:after:left-0 lg:after:translate-x-0 after:w-10 after:h-1 after:bg-primary/20 after:rounded-full">
+                                Company</h4>
+                            <ul class="space-y-4">
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">About us</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Delivery</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Legal Notice</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Terms &amp; conditions</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Secure payment</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <h4
+                                class="font-display text-lg font-bold text-heading-light dark:text-heading-dark mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 lg:after:left-0 lg:after:translate-x-0 after:w-10 after:h-1 after:bg-primary/20 after:rounded-full">
+                                Account</h4>
+                            <ul class="space-y-4">
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Sign In</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">View Cart</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Return Policy</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Become a Vendor</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Affiliate Program</a></li>
+                                <li><a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary dark:hover:text-primary transition-colors font-medium"
+                                        href="#">Payments</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <h4
+                                class="font-display text-lg font-bold text-heading-light dark:text-heading-dark mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 lg:after:left-0 lg:after:translate-x-0 after:w-10 after:h-1 after:bg-primary/20 after:rounded-full">
+                                Contact</h4>
+                            <ul class="space-y-5 mb-8">
+                                <li class="flex items-start gap-3 justify-center lg:justify-start">
+                                    <span
+                                        class="material-symbols-outlined text-primary shrink-0 mt-1">location_on</span>
+                                    <span
+                                        class="text-footer-text-light dark:text-footer-text-dark leading-snug">Bangladesh,
+                                        rajshahi, natore, 6400</span>
+                                </li>
+                                <li class="flex items-center gap-3 justify-center lg:justify-start">
+                                    <span class="material-symbols-outlined text-primary shrink-0">call</span>
+                                    <a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary transition-colors"
+                                        href="tel:+009876543210">+88 0000000000</a>
+                                </li>
+                                <li class="flex items-center gap-3 justify-center lg:justify-start">
+                                    <span class="material-symbols-outlined text-primary shrink-0">mail</span>
+                                    <a class="text-footer-text-light dark:text-footer-text-dark hover:text-primary transition-colors"
+                                        href="mailto:example@email.com">example@email.com</a>
+                                </li>
+                            </ul>
+                            <div class="flex gap-3">
+                                <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all duration-300"
+                                    href="#">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all duration-300"
+                                    href="#">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all duration-300"
+                                    href="#">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z">
+                                        </path>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </a>
+                                <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all duration-300"
+                                    href="#">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <p class="text-sm text-footer-text-light dark:text-footer-text-dark">
+                            Copyright © 2026 <span class="text-primary font-semibold">webnion</span> all rights
+                            reserved.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <div
+                                class="h-8 cursor-pointer bg-white dark:bg-gray-800 rounded px-1 flex items-center shadow-sm border border-gray-100 dark:border-gray-700">
+                                <img alt="Visa" class="h-3" src="../image/card-2.png" />
+                            </div>
+                            <div
+                                class="h-8 cursor-pointer bg-white dark:bg-gray-800 rounded px-1 flex items-center shadow-sm border border-gray-100 dark:border-gray-700">
+                                <img alt="Mastercard" class="h-4" src="../image/card-1.png" />
+                            </div>
+                            <div
+                                class="h-8 cursor-pointer bg-white dark:bg-gray-800 rounded px-1 flex items-center shadow-sm border border-gray-100 dark:border-gray-700">
+                                <img alt="Visa" class="h-3" src="../image/card-2.png" />
+                            </div>
+                            <div
+                                class="h-8 cursor-pointer bg-white dark:bg-gray-800 rounded px-1 flex items-center shadow-sm border border-gray-100 dark:border-gray-700">
+                                <img alt="Mastercard" class="h-4" src="../image/card-1.png" />
+                            </div>
+                            <div
+                                class="h-8 cursor-pointer bg-white dark:bg-gray-800 rounded px-1 flex items-center shadow-sm border border-gray-100 dark:border-gray-700">
+                                <img alt="Visa" class="h-5" src="../image/card-2.png" />
+                            </div>
+                        </div>
+                        <button onclick="toggleScroll()"
+                            class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary text-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined">keyboard_arrow_up</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section stop -->
+
+    <!-- ================== MOBILE BOTTOM NAV ================== -->
+    <section
+        class="xl:hidden fixed z-50 bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 pb-4 pt-3 px-4 flex justify-between items-center">
+        <button data-open="category" class="catOpenBtn flex flex-col items-center justify-center w-full group">
+            <span
+                class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">menu</span>
+            <span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Category</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center w-full group">
+            <span
+                class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">chat_bubble_outline</span>
+            <span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Message</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center w-full">
+            <span class="material-icons text-primary">home</span>
+            <span class="text-[10px] mt-1 font-semibold text-primary">Home</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center w-full group relative">
+            <span
+                class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">shopping_cart</span>
+            <span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Cart (0)</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center w-full group">
+            <span
+                class="material-icons text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">person_outline</span>
+            <span class="text-[10px] mt-1 font-medium text-gray-500 dark:text-gray-400">Login</span>
+        </button>
+    </section>
+    <!-- ================== MOBILE BOTTOM NAV END ================== -->
+    <!-- ================== BACKDROP ================== -->
+    <div id="appBackdrop"
+        class="fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300"
+        aria-hidden="true"></div>
+
+
+    <!-- ================== CATEGORY DRAWER ================== -->
+    <section id="catDrawer" data-drawer="category" role="dialog" aria-modal="true" aria-hidden="true" class="fixed z-50 bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800
+  left-0 bottom-0 w-9/12 sm:w-1/2 md:w-1/3 lg:w-1/4
+  max-h-[90vh] flex flex-col rounded-t-2xl
+  xl:top-0 xl:bottom-0 xl:max-h-screen xl:rounded-none xl:border-r
+
+  opacity-0 pointer-events-none
+  transition-all duration-300 ease-out
+  translate-y-6 xl:-translate-x-6 xl:translate-y-0">
+
+        <!-- Header -->
+        <div class="px-4 pt-4 pb-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img src="../image/logo.png" alt="Logo" class="h-7 w-auto" />
+                <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Categories</h2>
+            </div>
+
+            <button data-close class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+                aria-label="Close">
+                <span class="material-icons text-gray-600 dark:text-gray-300">close</span>
+            </button>
+        </div>
+
+        <!-- Body -->
+        <div class="px-4 pb-5 overflow-y-auto flex-1">
+            <ul class="space-y-2" id="catTree">
+
+                <!-- Level 1 -->
+                <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                        data-toggle="lvl1" aria-expanded="false">
+                        <span class="font-medium">Electronics</span>
+                        <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                    </button>
+
+                    <!-- Level 2 container -->
+                    <div class="hidden" data-panel="lvl1">
+                        <ul class="p-2 space-y-2">
+
+                            <!-- Level 2 -->
+                            <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                                    data-toggle="lvl2" aria-expanded="false">
+                                    <span class="font-medium">Mobile</span>
+                                    <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                                </button>
+
+                                <!-- Level 3 container -->
+                                <div class="hidden" data-panel="lvl2">
+                                    <ul class="p-2 space-y-2">
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                Android Phones
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                iPhone
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Another Level 2 -->
+                            <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                                    data-toggle="lvl2b" aria-expanded="false">
+                                    <span class="font-medium">Laptop</span>
+                                    <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                                </button>
+
+                                <div class="hidden" data-panel="lvl2b">
+                                    <ul class="p-2 space-y-2">
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                Gaming Laptop
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                Ultrabook
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Another Level 1 -->
+                <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                        data-toggle="fashion1" aria-expanded="false">
+                        <span class="font-medium">Fashion</span>
+                        <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                    </button>
+
+                    <div class="hidden" data-panel="fashion1">
+                        <ul class="p-2 space-y-2">
+                            <li class="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-3 px-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
+                                    data-toggle="fashion2" aria-expanded="false">
+                                    <span class="font-medium">Men</span>
+                                    <span class="material-icons text-gray-500 dark:text-gray-400">chevron_right</span>
+                                </button>
+
+                                <div class="hidden" data-panel="fashion2">
+                                    <ul class="p-2 space-y-2">
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                T-Shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block w-full py-3 px-3 rounded-xl border border-gray-100 dark:border-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                                                Jeans
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================== SCRIPT ================== -->
+
+    <script src="../js/home.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/productdetails.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

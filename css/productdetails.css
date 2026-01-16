@@ -1,0 +1,19 @@
+        .active-thumb {
+            border: 2px solid #10B981;
+        }
+
+        .color-swatch-ring {
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px #10B981;
+        }
+
+        .dark .color-swatch-ring {
+            box-shadow: 0 0 0 2px #111827, 0 0 0 4px #10B981;
+        }
+
+
+  /* gap-4 = 1rem */
+  .thumbSwiper .swiper-wrapper { gap: 1rem; }
+
+  /* Swiper default spacing avoid */
+  .thumbSwiper .swiper-slide { width: auto; }
+

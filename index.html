@@ -12,8 +12,9 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/global.css">
-
+    
 </head>
 
 <body
@@ -66,33 +67,21 @@
                     <!-- SHOP WITH SUBMENU -->
                     <li class="relative group cursor-pointer">
                         <a href="./main/product.html">
-                        <span class="flex items-center hover:text-primary">
-                            Shop
-                            <span class="material-icons-outlined text-[10px] ml-1">add</span>
-                        </span>
-                        </a>
-                        <!-- SHOP SUBMENU -->
-                        <ul
-                            class="absolute top-full left-0 mt-1 w-44 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
-                            <li class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                Men
-                            </li>
-                            <li class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                Women
-                            </li>
-                            <li class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                Children
-                            </li>
-                            <li class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                New Arrivals
-                            </li>
-                        </ul>
-                        <!-- SHOP SUBMENU stop-->
+                            <span class="flex items-center hover:text-primary">
+                                All product
+                                <span class="material-icons-outlined text-[10px] ml-1">add</span>
+                            </span>
+                        </a>  
+                    </li>
+                    <li class="relative group cursor-pointer">
+                        <a href="./main/productdetails.html">
+                            <span class="flex items-center hover:text-primary">
+                                product details
+                                <span class="material-icons-outlined text-[10px] ml-1">add</span>
+                            </span>
+                        </a>  
                     </li>
 
-                    <li class="hover:text-primary cursor-pointer">
-                        My Account
-                    </li>
                 </ul>
             </div>
 
@@ -155,7 +144,7 @@
                     </button>
                     <button
                         class="bg-transparent border-2 border-gray-200 dark:border-gray-700 text-secondary dark:text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
-                        VIEW DETAILS
+                        View Details
                     </button>
                 </div>
             </div>
@@ -269,128 +258,174 @@
                 View All
             </a>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="group cursor-pointer">
-                <div
-                    class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-[#9381FF] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 card-hover">
-                    <img alt="Cozy Knit Cardigan"
-                        class="h-full w-full object-cover mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105"
-                        src="./image/product/product-1.png" />
-                    <div class="absolute top-4 left-4">
-                        <span
-                            class="bg-white/90 backdrop-blur-sm text-black text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
-                            GET 20% OFF
-                        </span>
-                    </div>
-                    <div class="absolute top-4 right-4 flex flex-col gap-2 action-buttons">
-                        <button
-                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                            <span class="material-symbols-outlined">favorite</span>
-                        </button>
-                        <button
-                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                            <span class="material-symbols-outlined">shopping_bag</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="mt-4 flex justify-between items-start">
-                    <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 leading-tight">
-                        Cozy Knit Cardigan Sweater
-                    </h3>
-                    <p class="text-sm font-bold text-primary">$80</p>
-                </div>
-            </div>
-            <div class="group cursor-pointer">
-                <div
-                    class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-[#D4A373] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 card-hover">
-                    <img alt="Sophisticated Swagger Suit"
-                        class="h-full w-full object-cover mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105"
-                        src="./image/product/product-2.png" />
-                    <div class="absolute top-4 left-4">
-                        <span
-                            class="bg-white/90 backdrop-blur-sm text-black text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
-                            GET 20% OFF
-                        </span>
-                    </div>
-                    <div class="absolute top-4 right-4 flex flex-col gap-2 action-buttons">
-                        <button
-                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                            <span class="material-symbols-outlined">favorite</span>
-                        </button>
-                        <button
-                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                            <span class="material-symbols-outlined">shopping_bag</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="mt-4 flex justify-between items-start">
-                    <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 leading-tight">
-                        Sophisticated Swagger Suit
-                    </h3>
-                    <p class="text-sm font-bold text-primary">$80</p>
-                </div>
-            </div>
-            <div class="group cursor-pointer">
-                <div
-                    class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-[#E2E8F0] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 card-hover">
-                    <img alt="Classic Denim Skinny Jeans"
-                        class="h-full w-full object-cover mix-blend-multiply opacity-80 transition-transform duration-500 group-hover:scale-105"
-                        src="./image/product/product-3.png" />
-                    <div class="absolute top-4 left-4">
-                        <span
-                            class="bg-white/90 backdrop-blur-sm text-black text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
-                            GET 20% OFF
-                        </span>
-                    </div>
-                    <div class="absolute top-4 right-4 flex flex-col gap-2 action-buttons">
-                        <button
-                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                            <span class="material-symbols-outlined">favorite</span>
-                        </button>
-                        <button
-                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                            <span class="material-symbols-outlined">shopping_bag</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="mt-4 flex justify-between items-start">
-                    <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 leading-tight">
-                        Classic Denim Skinny Jeans
-                    </h3>
-                    <p class="text-sm font-bold text-primary">$80</p>
-                </div>
-            </div>
-            <div class="group cursor-pointer">
-                <div
-                    class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-[#F87171] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 card-hover">
-                    <img alt="Athletic Mesh Sports Leggings"
-                        class="h-full w-full object-cover mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105"
-                        src="./image/product/product-4.png" />
-                    <div class="absolute top-4 left-4">
-                        <span
-                            class="bg-white/90 backdrop-blur-sm text-black text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
-                            GET 20% OFF
-                        </span>
-                    </div>
-                    <div class="absolute top-4 right-4 flex flex-col gap-2 action-buttons">
-                        <button
-                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                            <span class="material-symbols-outlined">favorite</span>
-                        </button>
-                        <button
-                            class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                            <span class="material-symbols-outlined">shopping_bag</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="mt-4 flex justify-between items-start">
-                    <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 leading-tight">
-                        Athletic Mesh Sports Leggings
-                    </h3>
-                    <p class="text-sm font-bold text-primary">$80</p>
-                </div>
-            </div>
+<div class="swiper productSwiper">
+  <div class="swiper-wrapper">
+
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#D97706]/20">
+          <img alt="Sophisticated Swagger Suit"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-1.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
         </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
+            Sophisticated<br />Swagger Suit</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#3B82F6]/20">
+          <img alt="Classic Denim Skinny Jeans"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-10.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Classic Denim
+            Skinny<br />Jeans</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#D97706]/20">
+          <img alt="Sophisticated Swagger Suit"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-12.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
+            Sophisticated<br />Swagger Suit</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#EF4444]/20">
+          <img alt="Athletic Mesh Sports Leggings"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-9.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Athletic Mesh
+            Sports<br />Leggings</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="swiper-slide">
+      <div class="group relative flex flex-col cursor-pointer">
+        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#94A3B8]/20">
+          <img alt="Vintage Denim Overalls"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            src="../image/product/product-8.png" />
+          <div class="absolute top-4 left-4"><span
+              class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
+              20% Off</span></div>
+          <div class="absolute top-4 right-4 flex flex-col gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl">View Details</button>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-start">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Vintage
+            Denim<br />Overalls Shorts</h3>
+          <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
     </section>
     <!-- trending product section stop  -->
     <!-- marque section start  -->
@@ -1218,6 +1253,8 @@
         <script src="./js/home.js"></script>
         <script src="./js/global.js"></script>
         <script src="./js/categoryToggle.js"></script>
+        <script src="./js/productdetails.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </body>
 
 </html>
