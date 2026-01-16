@@ -131,3 +131,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+
+// scroll button 
+  function toggleScroll() {
+    // Scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }

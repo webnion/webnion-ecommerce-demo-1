@@ -53,3 +53,17 @@
   .marquee-container:hover .marquee-content {
   animation-play-state: paused;
 }
+
+        .arch-image {
+            border-top-left-radius: 999px;
+            border-top-right-radius: 999px;
+            border-bottom-left-radius: 999px;
+            border-bottom-right-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1.1;
+            object-fit: cover;
+        }
+        .material-symbols-outlined {
+            font-size: 18px;
+            vertical-align: middle;
+        }
