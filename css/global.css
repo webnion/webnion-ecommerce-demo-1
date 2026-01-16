@@ -30,6 +30,19 @@
             animation: marquee 30s linear infinite;
         }
 
+
+
+        .drawer-open {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translate3d(0,0,0) !important;
+}
+
+.backdrop-open {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -67,3 +80,4 @@
             font-size: 18px;
             vertical-align: middle;
         }
+

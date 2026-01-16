@@ -1,0 +1,65 @@
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #374151;
+        }
+
+
+  /* Keep your colors: thumbs use bg-primary, border-white, dark:border-slate-900 */
+  .range {
+    pointer-events: none; /* we enable pointer on thumbs below */
+  }
+
+  /* WebKit */
+  .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    pointer-events: auto;
+    cursor: pointer;
+    border-radius: 9999px;
+    border: 2px solid transparent; /* replaced by pseudo styling below */
+  }
+
+  /* Firefox */
+  .range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    pointer-events: auto;
+    cursor: pointer;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+  }
+
+  /* Create thumb visuals using box-shadow trick so we can match Tailwind colors via classes on wrapper */
+  /* We'll style via CSS variables set in JS to avoid changing your colors */
+  .range-min::-webkit-slider-thumb,
+  .range-max::-webkit-slider-thumb {
+    background: var(--thumb-bg, #000);
+    border: 2px solid var(--thumb-border, #fff);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  }
+  .range-min::-moz-range-thumb,
+  .range-max::-moz-range-thumb {
+    background: var(--thumb-bg, #000);
+    border: 2px solid var(--thumb-border, #fff);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  }
+
+  /* Hide default track styling */
+  .range::-webkit-slider-runnable-track { background: transparent; }
+  .range::-moz-range-track { background: transparent; }

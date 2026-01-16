@@ -19,12 +19,12 @@
 <body
     class="bg-background-light dark:bg-background-dark text-secondary dark:text-gray-100 transition-colors duration-200">
     <header class="bg-primary py-4 px-6 md:px-12 flex flex-wrap items-center justify-between gap-4">
-        <div class="flex items-center space-x-2 cursor-pointer">
+        <a href="./index.html" class="flex items-center space-x-2 cursor-pointer">
             <div class="bg-white p-1 rounded-lg">
                 <span class="material-icons-outlined text-primary text-3xl">bolt</span>
             </div>
             <span class="text-white text-3xl font-extrabold tracking-tight">Webnion</span>
-        </div>
+        </a>
         <div class="flex-grow max-w-2xl bg-white dark:bg-gray-800 rounded-full flex items-center px-4 py-1 shadow-sm">
             <div class="hidden md:flex items-center border-r border-gray-200 dark:border-gray-700 pr-4 mr-4">
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400">All Categories</span>
@@ -61,15 +61,16 @@
                 </div>
                 <!-- DESKTOP MENU -->
                 <ul class="hidden xl:flex items-center space-x-6 text-sm font-medium text-gray-600 dark:text-gray-300">
-                    <li class="hover:text-primary cursor-pointer">Home</li>
+                    <li class="hover:text-primary cursor-pointer"><a href="./index.html">Home</a></li>
 
                     <!-- SHOP WITH SUBMENU -->
                     <li class="relative group cursor-pointer">
+                        <a href="./main/product.html">
                         <span class="flex items-center hover:text-primary">
                             Shop
                             <span class="material-icons-outlined text-[10px] ml-1">add</span>
                         </span>
-
+                        </a>
                         <!-- SHOP SUBMENU -->
                         <ul
                             class="absolute top-full left-0 mt-1 w-44 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
@@ -451,7 +452,7 @@
     <!-- marque section stop  -->
 
 
-    <!-- product section start -->
+    <!-- most popular product section start -->
     <section class="max-w-7xl mx-auto px-4 py-12 md:py-20">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
             <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Most Popular Products</h2>
@@ -742,7 +743,7 @@
             </button>
         </div>
     </section>
-    <!-- product section stop -->
+    <!-- most popular product section stop -->
 
     <!-- blog section start -->
 
@@ -835,11 +836,14 @@
     </div>
     <!-- blog section stop -->
 
+
+
+    <!-- using all page -->
     <!-- footer start -->
 
-    <body class="bg-white dark:bg-gray-950 transition-colors duration-300">
+    <footer class="bg-white dark:bg-gray-950 transition-colors duration-300">
         <div class=" flex flex-col justify-end">
-            <footer
+            <div
                 class="bg-background-light dark:bg-background-dark pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
@@ -1026,18 +1030,10 @@
                         </button>
                     </div>
                 </div>
-            </footer>
+            </div>
         </div>
-
+        </footer>
         <!-- footer section stop -->
-
-
-
-
-
-
-
-
 
         <!-- ================== MOBILE BOTTOM NAV ================== -->
         <section
@@ -1072,8 +1068,6 @@
             </button>
         </section>
         <!-- ================== MOBILE BOTTOM NAV END ================== -->
-
-
         <!-- ================== BACKDROP ================== -->
         <div id="appBackdrop" class="fixed inset-0 z-50 hidden bg-black/40" aria-hidden="true"></div>
 
