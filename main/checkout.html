@@ -12,13 +12,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/productdetails.css">
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark text-secondary dark:text-gray-100 transition-colors duration-200">
-    <!-- top header section start -->
+    <!-- top header section start  -->
     <header class="bg-primary py-4 px-6 md:px-12 flex flex-wrap items-center justify-between gap-4">
         <a href="../index.html" class="flex items-center space-x-2 cursor-pointer">
             <div class="bg-white p-1 rounded-lg">
@@ -46,8 +47,7 @@
             </div>
         </div>
     </header>
-    <!-- top header section stop -->
-     <!-- Navbar for all page start design -->
+    <!-- top header section stop  -->
     <nav
         class="xl:sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 px-2 md:px-12 py-3">
         <div class="flex items-center justify-between">
@@ -64,8 +64,9 @@
                 </div>
                 <!-- DESKTOP MENU -->
                 <ul class="hidden xl:flex items-center space-x-6 text-sm font-medium text-gray-600 dark:text-gray-300">
-                    <li class="hover:text-primary cursor-pointer"><a href="../index.html">Home</a>
-                    </li>
+                    <li class="hover:text-primary cursor-pointer"><a href="../index.html">Home</a></li>
+
+                    <!-- SHOP WITH SUBMENU -->
                     <li class="relative group cursor-pointer">
                         <a href="./product.html">
                             <span class="flex items-center hover:text-primary">
@@ -82,8 +83,7 @@
                             </span>
                         </a>
                     </li>
-                    <!-- account menu with submenu  -->
-                    <li class="relative group cursor-pointer">
+                                        <li class="relative group cursor-pointer">
                         <a>
                             <span class="flex items-center hover:text-primary">
                                 Accounts
@@ -92,28 +92,28 @@
                         </a>
                         <!-- submenu -->
                         <ul class="absolute left-0 top-full mt-2 w-44 rounded-xl bg-white dark:bg-gray-900
-                            shadow-xl border border-gray-100 dark:border-gray-800
-                            opacity-0 invisible translate-y-2
-                            group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-                            transition-all duration-200 ease-out z-50">
+           shadow-xl border border-gray-100 dark:border-gray-800
+           opacity-0 invisible translate-y-2
+           group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+           transition-all duration-200 ease-out z-50">
 
                             <li>
                                 <a href="./login.html" class="block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200
-                                 hover:bg-primary/10 hover:text-primary rounded-lg transition">
+                hover:bg-primary/10 hover:text-primary rounded-lg transition">
                                     Login
                                 </a>
                             </li>
 
                             <li>
                                 <a href="./register.html" class="block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200
-                                    hover:bg-primary/10 hover:text-primary rounded-lg transition">
+                hover:bg-primary/10 hover:text-primary rounded-lg transition">
                                     Register
                                 </a>
                             </li>
 
                             <li>
                                 <a href="./checkout.html" class="block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200
-                                hover:bg-primary/10 hover:text-primary rounded-lg transition">
+                hover:bg-primary/10 hover:text-primary rounded-lg transition">
                                     Checkout
                                 </a>
                             </li>
@@ -135,7 +135,7 @@
                         5
                     </span>
                 </button>
-                <!-- dark light toggle button  -->
+
                 <button class="hover:text-primary transition-colors"
                     onclick="document.documentElement.classList.toggle('dark')">
                     <span class="material-icons-outlined dark:hidden">dark_mode</span>
@@ -157,13 +157,13 @@
                     <div class="animate-fadeIn">
                         <h1
                             class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4 drop-shadow-sm">
-                            Cart Page
+                            checkout page
                         </h1>
                         <nav aria-label="Breadcrumb"
                             class="flex items-center justify-center space-x-2 text-sm md:text-base font-medium text-white/90">
                             <a class="hover:text-white transition-colors" href="../index.html">Home</a>
                             <span class="material-icons text-sm md:text-lg opacity-60">chevron_right</span>
-                            <span class="text-white">Webnion Cart page</span>
+                            <span class="text-white">Webnion checkout page</span>
                         </nav>
                     </div>
                 </div>
@@ -171,255 +171,240 @@
         </div>
     </section>
     <!-- banner for all page stop -->
-    <!-- cart main section start -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 class="text-3xl font-bold mb-8">Your Cart</h1>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div class="lg:col-span-8">
-                <div
-                    class="hidden md:grid grid-cols-12 gap-4 px-6 py-4 text-sm font-semibold text-slate-500 uppercase tracking-wider">
-                    <div class="col-span-5">Product</div>
-                    <div class="col-span-2 text-center">Price</div>
-                    <div class="col-span-2 text-center">Quantity</div>
-                    <div class="col-span-2 text-center">Subtotal</div>
-                    <div class="col-span-1"></div>
-                </div>
-<div class="space-y-3">
-  <!-- ROW 1 -->
-  <div
-    class="product-row grid grid-cols-1 sm:grid-cols-12 gap-4 items-start sm:items-center px-4 sm:px-6 py-5 sm:py-6 rounded-xl transition-all">
-    
-    <!-- Product -->
-    <div class="sm:col-span-5 flex items-center gap-4">
-      <div
-        class="product-image-container flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-sm">
-        <img alt="Sophisticated Swagger Suit" class="w-full h-full object-cover" src="../image/product/product-3.png" />
-      </div>
-      <div class="min-w-0">
-        <h3 class="font-semibold text-base sm:text-lg truncate">Sophisticated Swagger Suit</h3>
-      </div>
-    </div>
 
-    <!-- Price -->
-    <div class="sm:col-span-2 sm:text-center font-medium flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Price:</span>
-      $40.00
-    </div>
 
-    <!-- Qty -->
-    <div class="sm:col-span-2 flex justify-start sm:justify-center items-center">
-      <div
-        class="flex items-center gap-1 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-700 p-1">
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">remove</span>
-        </button>
-        <span class="w-8 text-center font-semibold">1</span>
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">add</span>
-        </button>
-      </div>
-    </div>
 
-    <!-- Subtotal -->
-    <div class="sm:col-span-2 sm:text-center font-bold text-base sm:text-lg subtotal-text flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Subtotal:</span>
-      $160.00
-    </div>
 
-    <!-- Remove -->
-    <div class="sm:col-span-1 flex justify-start sm:justify-center">
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors">
-        <span class="material-icons-outlined text-sm">close</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- ROW 2 -->
-  <div
-    class="product-row grid grid-cols-1 sm:grid-cols-12 gap-4 items-start sm:items-center px-4 sm:px-6 py-5 sm:py-6 rounded-xl transition-all">
-    <div class="sm:col-span-5 flex items-center gap-4">
-      <div
-        class="product-image-container flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-sm">
-        <img alt="Cozy Knit Cardigan" class="w-full h-full object-cover" src="../image/product/product-4.png" />
-      </div>
-      <div class="min-w-0">
-        <h3 class="font-semibold text-base sm:text-lg truncate">Cozy Knit Cardigan Sweater</h3>
-      </div>
-    </div>
-
-    <div class="sm:col-span-2 sm:text-center font-medium flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Price:</span>
-      $56.00
-    </div>
-
-    <div class="sm:col-span-2 flex justify-start sm:justify-center items-center">
-      <div
-        class="flex items-center gap-2 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-700 p-1">
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">remove</span>
-        </button>
-        <span class="w-8 text-center font-semibold">1</span>
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">add</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="sm:col-span-2 sm:text-center font-bold text-base sm:text-lg subtotal-text flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Subtotal:</span>
-      $120.00
-    </div>
-
-    <div class="sm:col-span-1 flex justify-start sm:justify-center">
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:bg-primary hover:text-white transition-colors">
-        <span class="material-icons-outlined text-sm">close</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- ROW 3 -->
-  <div
-    class="product-row grid grid-cols-1 sm:grid-cols-12 gap-4 items-start sm:items-center px-4 sm:px-6 py-5 sm:py-6 rounded-xl transition-all">
-    <div class="sm:col-span-5 flex items-center gap-4">
-      <div
-        class="product-image-container flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-sm">
-        <img alt="Athletic Mesh Sports Leggings" class="w-full h-full object-cover" src="../image/product/product-5.png" />
-      </div>
-      <div class="min-w-0">
-        <h3 class="font-semibold text-base sm:text-lg truncate">Athletic Mesh Sports Leggings</h3>
-      </div>
-    </div>
-
-    <div class="sm:col-span-2 sm:text-center font-medium flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Price:</span>
-      $30.00
-    </div>
-
-    <div class="sm:col-span-2 flex justify-start sm:justify-center items-center">
-      <div
-        class="flex items-center gap-2 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-700 p-1">
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">remove</span>
-        </button>
-        <span class="w-8 text-center font-semibold">1</span>
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">add</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="sm:col-span-2 sm:text-center font-bold text-base sm:text-lg subtotal-text flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Subtotal:</span>
-      $40.00
-    </div>
-
-    <div class="sm:col-span-1 flex justify-start sm:justify-center">
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:bg-primary hover:text-white transition-colors">
-        <span class="material-icons-outlined text-sm">close</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<div class="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-  <!-- Coupon box -->
-  <div
-    class="w-full sm:w-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-2">
-    <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
-      <input
-        class="w-full sm:w-64 md:w-72 border-0 focus:ring-0 bg-transparent text-sm px-4 py-3 dark:text-white"
-        placeholder="Coupon Code" type="text" />
-      <button
-        class="w-full sm:w-auto whitespace-nowrap px-6 py-3 rounded-lg font-semibold text-sm bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-primary hover:text-white transition-colors">
-        Apply Coupon
-      </button>
-    </div>
-  </div>
-
-  <!-- Update cart -->
-  <button
-    class="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white dark:bg-white dark:text-slate-900 rounded-xl font-bold hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors uppercase tracking-widest text-sm">
-    Update Cart
-  </button>
-</div>
-
+    <!-- main section start -->
+    <main class="max-w-7xl mx-auto px-4 py-8 lg:py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-8 space-y-10">
+                <section>
+                    <div class="flex items-center gap-4 mb-6">
+                        <span
+                            class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 flex items-center justify-center font-bold text-sm">1</span>
+                        <h2 class="text-2xl font-semibold">Shipping &amp; Billing</h2>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-slate-700 dark:text-slate-300">First Name</label>
+                                <input
+                                    class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary"
+                                    placeholder="Shohan" type="text" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Last Name</label>
+                                <input
+                                    class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary"
+                                    placeholder="Ali" type="text" />
+                            </div>
+                            <div class="md:col-span-2 space-y-2">
+                                <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Address Line
+                                    1</label>
+                                <input
+                                    class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary"
+                                    placeholder="123 Modern Street" type="text" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-slate-700 dark:text-slate-300">City</label>
+                                <select
+                                    class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary">
+                                    <option>Dhaka</option>
+                                    <option>Rajshahi</option>
+                                    <option>Borishal</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Post Code</label>
+                                <input
+                                    class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary"
+                                    placeholder="10001" type="text" />
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800">
+                            <h3 class="font-medium mb-4">Delivery Method</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <label
+                                    class="relative flex items-center p-4 border rounded-xl cursor-pointer hover:border-primary transition-all border-slate-200 dark:border-slate-700 has-[:checked]:bg-emerald-50 dark:has-[:checked]:bg-emerald-900/10 has-[:checked]:border-primary">
+                                    <input checked="" class="text-primary focus:ring-primary h-5 w-5 border-slate-300"
+                                        name="shipping" type="radio" />
+                                    <div class="ml-4">
+                                        <span class="block text-sm font-bold">Standard Delivery</span>
+                                        <span class="text-xs text-slate-500">Free • 3-5 business days</span>
+                                    </div>
+                                </label>
+                                <label
+                                    class="relative flex items-center p-4 border rounded-xl cursor-pointer hover:border-primary transition-all border-slate-200 dark:border-slate-700 has-[:checked]:bg-emerald-50 dark:has-[:checked]:bg-emerald-900/10 has-[:checked]:border-primary">
+                                    <input class="text-primary focus:ring-primary h-5 w-5 border-slate-300"
+                                        name="shipping" type="radio" />
+                                    <div class="ml-4">
+                                        <span class="block text-sm font-bold">Express Delivery</span>
+                                        <span class="text-xs text-slate-500">$5.00 • 1-2 business days</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="flex items-center gap-4 mb-6">
+                        <span
+                            class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 flex items-center justify-center font-bold text-sm">3</span>
+                        <h2 class="text-2xl font-semibold">Payment Method</h2>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm">
+                        <div class="space-y-4">
+                            <label
+                                class="flex items-center p-4 border rounded-xl cursor-pointer border-primary bg-emerald-50 dark:bg-emerald-900/10">
+                                <input checked="" class="text-primary focus:ring-primary h-5 w-5 border-slate-300"
+                                    name="payment" type="radio" />
+                                <div class="ml-4 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm font-bold">Credit / Debit Card</span>
+                                        <div class="flex gap-2">
+                                            <img alt="Visa"
+                                                class="h-4 grayscale hover:grayscale-0 transition-all opacity-70"
+                                                src="../image/card-1.png" />
+                                            <img alt="Mastercard"
+                                                class="h-4 grayscale hover:grayscale-0 transition-all opacity-70"
+                                                src="../image/card-2.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label
+                                class="flex items-center p-4 border rounded-xl cursor-pointer border-slate-200 dark:border-slate-800">
+                                <input class="text-primary focus:ring-primary h-5 w-5 border-slate-300" name="payment"
+                                    type="radio" />
+                                <div class="ml-4">
+                                    <span class="text-sm font-bold">Digital Wallets</span>
+                                    <span class="text-xs text-slate-500 block">PayPal, Apple Pay, Google Pay</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="mt-8 space-y-4">
+                            <label class="flex items-start gap-3 cursor-pointer group">
+                                <div class="relative flex items-center mt-0.5">
+                                    <input
+                                        class="h-5 w-5 rounded-md border-slate-300 text-primary focus:ring-primary transition-all"
+                                        type="checkbox" />
+                                </div>
+                                <span class="text-sm text-slate-600 dark:text-slate-400">
+                                    I agree to the <a class="text-primary hover:underline" href="#">Terms &amp;
+                                        Conditions</a> and privacy policy.
+                                </span>
+                            </label>
+                            <div class="pt-4">
+                                <button
+                                    class="w-full py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-emerald-600 transition-all transform active:scale-[0.98] shadow-xl shadow-primary/30">
+                                    Place Order • $125.00
+                                </button>
+                                <p
+                                    class="text-center text-xs text-slate-500 mt-4 flex items-center justify-center gap-1">
+                                    <span class="material-icons-outlined text-sm">lock</span>
+                                    Secure checkout with 256-bit SSL encryption
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="lg:col-span-4 sticky top-8">
-                <div
-                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-8 shadow-sm">
-                    <h2 class="text-xl font-bold mb-6">Cart Total</h2>
-                    <div class="space-y-4 mb-8">
-                        <div class="border border-slate-100 dark:border-slate-800 rounded-xl p-4 text-center">
-                            <p class="text-sm font-medium">Bank Offer 5% Cashback</p>
-                        </div>
-                        <div
-                            class="border border-slate-100 dark:border-slate-800 rounded-xl p-4 flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 flex items-center justify-center bg-slate-50 dark:bg-slate-800 rounded-lg">
-                                <span class="material-icons-outlined text-slate-400">local_shipping</span>
-                            </div>
-                            <div>
-                                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Free</p>
-                                <p class="text-sm font-semibold">Enjoy The Product</p>
-                            </div>
-                        </div>
-                        <div
-                            class="border border-slate-100 dark:border-slate-800 rounded-xl p-4 flex items-start gap-4">
-                            <div
-                                class="w-12 h-12 flex items-center justify-center bg-slate-50 dark:bg-slate-800 rounded-lg shrink-0">
-                                <span class="material-icons-outlined text-slate-400">inventory_2</span>
-                            </div>
-                            <div>
-                                <p class="text-sm font-semibold mb-1">Enjoy The Product</p>
-                                <p class="text-xs text-slate-500 leading-relaxed">Fast delivery and premium packaging
-                                    included for all items.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="lg:col-span-4 space-y-6">
+                <div class="sticky top-28">
                     <div
-                        class="flex items-center gap-2 mb-6 p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg text-emerald-700 dark:text-emerald-400">
-                        <span class="material-icons-outlined text-sm">check_circle</span>
-                        <p class="text-sm font-medium">You will save $50.00 on this order</p>
+                        class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+                        <div class="p-6 border-b border-slate-100 dark:border-slate-800">
+                            <h3 class="text-lg font-bold">Order Summary</h3>
+                        </div>
+                        <div class="p-6 space-y-6 max-h-[400px] overflow-y-auto custom-scrollbar">
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-lg flex-shrink-0 overflow-hidden">
+                                    <img alt="Item" class="w-full h-full object-cover"
+                                        src="../image/product/product-7.png" />
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start">
+                                        <h4 class="text-sm font-semibold">Premium Sneakers</h4>
+                                        <span class="text-sm font-bold">$79.00</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">Size: 42 • Color: Black</p>
+                                    <div class="flex items-center gap-1 mt-1 text-primary">
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star_half</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-lg flex-shrink-0 overflow-hidden">
+                                    <img alt="Item" class="w-full h-full object-cover"
+                                        src="../image/product/product-5.png" />
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start">
+                                        <h4 class="text-sm font-semibold">Minimalist Watch</h4>
+                                        <span class="text-sm font-bold">$46.00</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-1">White / Silver</p>
+                                    <div class="flex items-center gap-1 mt-1 text-primary">
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                        <span class="material-icons-outlined text-[14px]">star</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-slate-50 dark:bg-slate-800/50 space-y-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Subtotal</span>
+                                <span class="font-medium">$125.00</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Shipping</span>
+                                <span class="text-primary font-medium">Free</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Tax</span>
+                                <span class="font-medium">$0.00</span>
+                            </div>
+                            <div class="pt-3 border-t border-slate-200 dark:border-slate-700">
+                                <div class="flex justify-between">
+                                    <span class="text-base font-bold">Total</span>
+                                    <span class="text-xl font-bold text-primary">$125.00</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex gap-2">
+                                <input
+                                    class="w-full text-sm rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-primary focus:border-primary"
+                                    placeholder="Promo code" type="text" />
+                                <button
+                                    class="px-4 py-2 bg-slate-200 dark:bg-slate-700 text-sm font-bold rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Apply</button>
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        class="border-t border-slate-100 dark:border-slate-800 pt-6 mb-8 flex justify-between items-center">
-                        <span class="text-slate-500 font-medium">Total</span>
-                        <span class="text-2xl font-bold">$125.75</span>
+                    <div class="mt-6 flex items-center justify-center gap-4 text-slate-400">
+                        <span class="material-icons-outlined text-2xl">verified_user</span>
+                        <span class="material-icons-outlined text-2xl">local_shipping</span>
+                        <span class="material-icons-outlined text-2xl">restart_alt</span>
+                        <span class="material-icons-outlined text-2xl">support_agent</span>
                     </div>
-                    <a href="./checkout.html"
-                        class="hidden md:block text-center w-full py-4 bg-primary text-white rounded-xl font-bold text-lg hover:bg-slate-900 transition-colors uppercase tracking-widest">
-                        Place Order
-                </a>
                 </div>
             </div>
         </div>
-    </div>
-    <div
-        class="mobile-sticky-footer md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700 p-4 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
-        <div class="flex items-center justify-between gap-4">
-            <div>
-                <p class="text-xs text-slate-500">Total Price</p>
-                <p class="text-xl font-bold text-primary">$125.75</p>
-            </div>
-            <a href="./checkout.html"
-                class="flex-grow text-center py-3 bg-primary text-white rounded-xl font-bold uppercase tracking-widest text-sm shadow-lg shadow-emerald-500/20 active:scale-95 transition-transform">
-                Place Order
-        </a>
-        </div>
-    </div>
+    </main>
+    <!-- main section stop -->
 
-    <!-- cart main section stop -->
 
-<!-- new arrival for many page  -->
+    <!-- new arrivel product start  -->
     <section class="max-w-7xl mx-auto px-4 py-16 lg:py-20 sm:px-6 lg:px-8 ">
         <div class="flex flex-col items-center mb-10 gap-4">
             <div>
@@ -439,29 +424,30 @@
                         <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#D97706]/20">
                             <img alt="Sophisticated Swagger Suit"
                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                                src="../image/product/product-9.png" />
+                                src="../image/product/product-1.png" />
                             <div class="absolute top-4 left-4"><span
                                     class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
                                     20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
+                            <div class="absolute top-4 right-4 flex flex-col gap-2">
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">favorite_border</span>
                                 </a>
 
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">shopping_basket</span>
                                 </a>
                             </div>
 
+                            <!-- View Details Button (Hover Only) -->
                             <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
                                 <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
+                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl hover:opacity-95 text-center">
                                     View Details
                                 </a>
-                            </div>s
+                            </div>
                         </div>
                         <div class="mt-4 flex justify-between items-start">
                             <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
@@ -481,25 +467,26 @@
                             <div class="absolute top-4 left-4"><span
                                     class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
                                     20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
+                            <div class="absolute top-4 right-4 flex flex-col gap-2">
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">favorite_border</span>
                                 </a>
 
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">shopping_basket</span>
                                 </a>
                             </div>
 
+                            <!-- View Details Button (Hover Only) -->
                             <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
                                 <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
+                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl hover:opacity-95 text-center">
                                     View Details
                                 </a>
-                            </div>s
+                            </div>
                         </div>
                         <div class="mt-4 flex justify-between items-start">
                             <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Classic Denim
@@ -508,35 +495,36 @@
                         </div>
                     </div>
                 </div>
-                <!-- Slide 1 -->
+                <!-- Slide 3 -->
                 <div class="swiper-slide">
                     <div class="group relative flex flex-col cursor-pointer">
                         <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#D97706]/20">
                             <img alt="Sophisticated Swagger Suit"
                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                                src="../image/product/product-4.png" />
+                                src="../image/product/product-5.png" />
                             <div class="absolute top-4 left-4"><span
                                     class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
                                     20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
+                            <div class="absolute top-4 right-4 flex flex-col gap-2">
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">favorite_border</span>
                                 </a>
 
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">shopping_basket</span>
                                 </a>
                             </div>
 
+                            <!-- View Details Button (Hover Only) -->
                             <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
                                 <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
+                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl hover:opacity-95 text-center">
                                     View Details
                                 </a>
-                            </div>s
+                            </div>
                         </div>
                         <div class="mt-4 flex justify-between items-start">
                             <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
@@ -545,35 +533,36 @@
                         </div>
                     </div>
                 </div>
-                <!-- Slide 3 -->
+                <!-- Slide 4 -->
                 <div class="swiper-slide">
                     <div class="group relative flex flex-col cursor-pointer">
                         <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#EF4444]/20">
                             <img alt="Athletic Mesh Sports Leggings"
                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                                src="../image/product/product-7.png" />
+                                src="../image/product/product-8.png" />
                             <div class="absolute top-4 left-4"><span
                                     class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
                                     20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
+                            <div class="absolute top-4 right-4 flex flex-col gap-2">
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">favorite_border</span>
                                 </a>
 
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">shopping_basket</span>
                                 </a>
                             </div>
 
+                            <!-- View Details Button (Hover Only) -->
                             <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
                                 <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
+                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl hover:opacity-95 text-center">
                                     View Details
                                 </a>
-                            </div>s
+                            </div>
                         </div>
                         <div class="mt-4 flex justify-between items-start">
                             <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Athletic Mesh
@@ -583,35 +572,36 @@
                     </div>
                 </div>
 
-                <!-- Slide 4 -->
+                <!-- Slide 5 -->
                 <div class="swiper-slide">
                     <div class="group relative flex flex-col cursor-pointer">
                         <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#94A3B8]/20">
                             <img alt="Vintage Denim Overalls"
                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                                src="../image/product/product-12.png" />
+                                src="../image/product/product-10.png" />
                             <div class="absolute top-4 left-4"><span
                                     class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
                                     20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
+                            <div class="absolute top-4 right-4 flex flex-col gap-2">
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">favorite_border</span>
                                 </a>
 
                                 <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
+                                    class="w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center text-slate-900 dark:text-white shadow-sm hover:text-primary transition-colors">
+                                    <span class="material-icons-outlined text-lg">shopping_basket</span>
                                 </a>
                             </div>
 
+                            <!-- View Details Button (Hover Only) -->
                             <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
                                 <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
+                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl hover:opacity-95 text-center">
                                     View Details
                                 </a>
-                            </div>s
+                            </div>
                         </div>
                         <div class="mt-4 flex justify-between items-start">
                             <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Vintage
@@ -625,8 +615,8 @@
         </div>
 
     </section>
-<!-- new arrival for many page stop -->
 
+    <!-- new arrivel product stop  -->
 
     <!-- using all page -->
     <!-- footer start -->
@@ -825,8 +815,6 @@
     </footer>
     <!-- footer section stop -->
 
-
-    <!--***** sheard section for all page toggle category mobile and desktop ******  -->
     <!-- ================== MOBILE BOTTOM NAV ================== -->
     <section
         class="xl:hidden fixed z-50 bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 pb-4 pt-3 px-4 flex justify-between items-center">
@@ -863,8 +851,9 @@
     <!-- ================== BACKDROP ================== -->
     <div id="appBackdrop"
         class="fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300"
-        aria-hidden="true">
-    </div>
+        aria-hidden="true"></div>
+
+
     <!-- ================== CATEGORY DRAWER ================== -->
     <section id="catDrawer" data-drawer="category" role="dialog" aria-modal="true" aria-hidden="true" class="fixed z-50 bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800
   left-0 bottom-0 w-9/12 sm:w-1/2 md:w-1/3 lg:w-1/4
@@ -1006,10 +995,6 @@
             </ul>
         </div>
     </section>
-
-
-
-
 
     <!-- ================== SCRIPT ================== -->
 

@@ -11,14 +11,12 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/productdetails.css">
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark text-secondary dark:text-gray-100 transition-colors duration-200">
-    <!-- top header section start -->
     <header class="bg-primary py-4 px-6 md:px-12 flex flex-wrap items-center justify-between gap-4">
         <a href="../index.html" class="flex items-center space-x-2 cursor-pointer">
             <div class="bg-white p-1 rounded-lg">
@@ -46,8 +44,6 @@
             </div>
         </div>
     </header>
-    <!-- top header section stop -->
-     <!-- Navbar for all page start design -->
     <nav
         class="xl:sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 px-2 md:px-12 py-3">
         <div class="flex items-center justify-between">
@@ -64,8 +60,9 @@
                 </div>
                 <!-- DESKTOP MENU -->
                 <ul class="hidden xl:flex items-center space-x-6 text-sm font-medium text-gray-600 dark:text-gray-300">
-                    <li class="hover:text-primary cursor-pointer"><a href="../index.html">Home</a>
-                    </li>
+                    <li class="hover:text-primary cursor-pointer"><a href="../index.html">Home</a></li>
+
+                    <!-- SHOP WITH SUBMENU -->
                     <li class="relative group cursor-pointer">
                         <a href="./product.html">
                             <span class="flex items-center hover:text-primary">
@@ -82,7 +79,6 @@
                             </span>
                         </a>
                     </li>
-                    <!-- account menu with submenu  -->
                     <li class="relative group cursor-pointer">
                         <a>
                             <span class="flex items-center hover:text-primary">
@@ -92,28 +88,28 @@
                         </a>
                         <!-- submenu -->
                         <ul class="absolute left-0 top-full mt-2 w-44 rounded-xl bg-white dark:bg-gray-900
-                            shadow-xl border border-gray-100 dark:border-gray-800
-                            opacity-0 invisible translate-y-2
-                            group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-                            transition-all duration-200 ease-out z-50">
+           shadow-xl border border-gray-100 dark:border-gray-800
+           opacity-0 invisible translate-y-2
+           group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+           transition-all duration-200 ease-out z-50">
 
                             <li>
                                 <a href="./login.html" class="block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200
-                                 hover:bg-primary/10 hover:text-primary rounded-lg transition">
+                hover:bg-primary/10 hover:text-primary rounded-lg transition">
                                     Login
                                 </a>
                             </li>
 
                             <li>
                                 <a href="./register.html" class="block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200
-                                    hover:bg-primary/10 hover:text-primary rounded-lg transition">
-                                    Register
+                hover:bg-primary/10 hover:text-primary rounded-lg transition">
+                                    register
                                 </a>
                             </li>
 
                             <li>
                                 <a href="./checkout.html" class="block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200
-                                hover:bg-primary/10 hover:text-primary rounded-lg transition">
+                hover:bg-primary/10 hover:text-primary rounded-lg transition">
                                     Checkout
                                 </a>
                             </li>
@@ -135,7 +131,7 @@
                         5
                     </span>
                 </button>
-                <!-- dark light toggle button  -->
+
                 <button class="hover:text-primary transition-colors"
                     onclick="document.documentElement.classList.toggle('dark')">
                     <span class="material-icons-outlined dark:hidden">dark_mode</span>
@@ -157,13 +153,13 @@
                     <div class="animate-fadeIn">
                         <h1
                             class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4 drop-shadow-sm">
-                            Cart Page
+                            Register page
                         </h1>
                         <nav aria-label="Breadcrumb"
                             class="flex items-center justify-center space-x-2 text-sm md:text-base font-medium text-white/90">
                             <a class="hover:text-white transition-colors" href="../index.html">Home</a>
                             <span class="material-icons text-sm md:text-lg opacity-60">chevron_right</span>
-                            <span class="text-white">Webnion Cart page</span>
+                            <span class="text-white">Webnion Register page</span>
                         </nav>
                     </div>
                 </div>
@@ -171,461 +167,128 @@
         </div>
     </section>
     <!-- banner for all page stop -->
-    <!-- cart main section start -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 class="text-3xl font-bold mb-8">Your Cart</h1>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div class="lg:col-span-8">
-                <div
-                    class="hidden md:grid grid-cols-12 gap-4 px-6 py-4 text-sm font-semibold text-slate-500 uppercase tracking-wider">
-                    <div class="col-span-5">Product</div>
-                    <div class="col-span-2 text-center">Price</div>
-                    <div class="col-span-2 text-center">Quantity</div>
-                    <div class="col-span-2 text-center">Subtotal</div>
-                    <div class="col-span-1"></div>
-                </div>
-<div class="space-y-3">
-  <!-- ROW 1 -->
-  <div
-    class="product-row grid grid-cols-1 sm:grid-cols-12 gap-4 items-start sm:items-center px-4 sm:px-6 py-5 sm:py-6 rounded-xl transition-all">
-    
-    <!-- Product -->
-    <div class="sm:col-span-5 flex items-center gap-4">
-      <div
-        class="product-image-container flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-sm">
-        <img alt="Sophisticated Swagger Suit" class="w-full h-full object-cover" src="../image/product/product-3.png" />
-      </div>
-      <div class="min-w-0">
-        <h3 class="font-semibold text-base sm:text-lg truncate">Sophisticated Swagger Suit</h3>
-      </div>
-    </div>
 
-    <!-- Price -->
-    <div class="sm:col-span-2 sm:text-center font-medium flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Price:</span>
-      $40.00
-    </div>
 
-    <!-- Qty -->
-    <div class="sm:col-span-2 flex justify-start sm:justify-center items-center">
-      <div
-        class="flex items-center gap-1 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-700 p-1">
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">remove</span>
-        </button>
-        <span class="w-8 text-center font-semibold">1</span>
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">add</span>
-        </button>
-      </div>
-    </div>
 
-    <!-- Subtotal -->
-    <div class="sm:col-span-2 sm:text-center font-bold text-base sm:text-lg subtotal-text flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Subtotal:</span>
-      $160.00
-    </div>
 
-    <!-- Remove -->
-    <div class="sm:col-span-1 flex justify-start sm:justify-center">
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors">
-        <span class="material-icons-outlined text-sm">close</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- ROW 2 -->
-  <div
-    class="product-row grid grid-cols-1 sm:grid-cols-12 gap-4 items-start sm:items-center px-4 sm:px-6 py-5 sm:py-6 rounded-xl transition-all">
-    <div class="sm:col-span-5 flex items-center gap-4">
-      <div
-        class="product-image-container flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-sm">
-        <img alt="Cozy Knit Cardigan" class="w-full h-full object-cover" src="../image/product/product-4.png" />
-      </div>
-      <div class="min-w-0">
-        <h3 class="font-semibold text-base sm:text-lg truncate">Cozy Knit Cardigan Sweater</h3>
-      </div>
-    </div>
-
-    <div class="sm:col-span-2 sm:text-center font-medium flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Price:</span>
-      $56.00
-    </div>
-
-    <div class="sm:col-span-2 flex justify-start sm:justify-center items-center">
-      <div
-        class="flex items-center gap-2 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-700 p-1">
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">remove</span>
-        </button>
-        <span class="w-8 text-center font-semibold">1</span>
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">add</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="sm:col-span-2 sm:text-center font-bold text-base sm:text-lg subtotal-text flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Subtotal:</span>
-      $120.00
-    </div>
-
-    <div class="sm:col-span-1 flex justify-start sm:justify-center">
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:bg-primary hover:text-white transition-colors">
-        <span class="material-icons-outlined text-sm">close</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- ROW 3 -->
-  <div
-    class="product-row grid grid-cols-1 sm:grid-cols-12 gap-4 items-start sm:items-center px-4 sm:px-6 py-5 sm:py-6 rounded-xl transition-all">
-    <div class="sm:col-span-5 flex items-center gap-4">
-      <div
-        class="product-image-container flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-sm">
-        <img alt="Athletic Mesh Sports Leggings" class="w-full h-full object-cover" src="../image/product/product-5.png" />
-      </div>
-      <div class="min-w-0">
-        <h3 class="font-semibold text-base sm:text-lg truncate">Athletic Mesh Sports Leggings</h3>
-      </div>
-    </div>
-
-    <div class="sm:col-span-2 sm:text-center font-medium flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Price:</span>
-      $30.00
-    </div>
-
-    <div class="sm:col-span-2 flex justify-start sm:justify-center items-center">
-      <div
-        class="flex items-center gap-2 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-700 p-1">
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">remove</span>
-        </button>
-        <span class="w-8 text-center font-semibold">1</span>
-        <button
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-80 transition-opacity">
-          <span class="material-icons-outlined text-sm">add</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="sm:col-span-2 sm:text-center font-bold text-base sm:text-lg subtotal-text flex sm:block items-center justify-between">
-      <span class="sm:hidden text-slate-500 mr-2">Subtotal:</span>
-      $40.00
-    </div>
-
-    <div class="sm:col-span-1 flex justify-start sm:justify-center">
-      <button
-        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:bg-primary hover:text-white transition-colors">
-        <span class="material-icons-outlined text-sm">close</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<div class="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-  <!-- Coupon box -->
-  <div
-    class="w-full sm:w-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-2">
-    <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
-      <input
-        class="w-full sm:w-64 md:w-72 border-0 focus:ring-0 bg-transparent text-sm px-4 py-3 dark:text-white"
-        placeholder="Coupon Code" type="text" />
-      <button
-        class="w-full sm:w-auto whitespace-nowrap px-6 py-3 rounded-lg font-semibold text-sm bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-primary hover:text-white transition-colors">
-        Apply Coupon
-      </button>
-    </div>
-  </div>
-
-  <!-- Update cart -->
+    <!-- main section start -->
+    <section class="pt-12 pb-8 text-center px-4">
+        <div class="flex items-center justify-center mb-4">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white mr-2">
+                <span class="material-icons">shopping_bag</span>
+            </div>
+            <span class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Webnion</span>
+        </div>
+        <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-2">Login</h1>
+        <p class="text-gray-500 dark:text-gray-400 max-w-md mx-auto text-sm md:text-base">
+            Get access to your Orders, Wishlist and Recommendations.
+        </p>
+    </section>
+    <main class="flex-grow flex items-center justify-center px-4 pb-20">
+        <div class="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            <div
+                class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 md:p-10 flex flex-col justify-between">
+                <form action="#" class="space-y-6" method="POST">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" for="email">
+                            Email Address*
+                        </label>
+                        <input
+                            class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
+                            id="email" placeholder="Enter your email address" required="" type="email" />
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300" for="password">
+                                Password*
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
+                                id="password" placeholder="Enter your password" required="" type="password" />
+                            <button
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+                                type="button">
+                                <span class="material-icons">visibility_off</span>
+                            </button>
+                        </div>
+                        <div class="text-right mt-2">
+                            <a class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="#">
+                                Forgot Password?
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <a  class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors order-2 sm:order-1"
+                            href="./register.html">
+                            Create Account?
+                        </a>
+                        <button
+                            class="w-full sm:w-auto px-10 py-3 bg-primary hover:bg-emerald-600 text-white font-bold rounded-lg transition-all transform active:scale-95 shadow-lg shadow-primary/20 order-1 sm:order-2"
+                            type="submit">
+                            Login
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-8">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-100 dark:border-gray-700"></div>
+                        </div>
+                        <div class="relative flex justify-center text-xs uppercase">
+                            <span class="bg-white dark:bg-gray-800 px-2 text-gray-400 dark:text-gray-500">Or continue
+                                with</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-4">
+  <!-- GOOGLE -->
   <button
-    class="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white dark:bg-white dark:text-slate-900 rounded-xl font-bold hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors uppercase tracking-widest text-sm">
-    Update Cart
+    class="flex items-center justify-center px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg
+           hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+    <svg class="h-5 w-5 mr-2" viewBox="0 0 48 48">
+      <path fill="#EA4335"
+        d="M24 9.5c3.2 0 6.1 1.1 8.3 3.2l6.2-6.2C34.7 2.3 29.7 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.2 5.6C11.7 13.4 17.4 9.5 24 9.5z" />
+      <path fill="#34A853"
+        d="M46.1 24.5c0-1.6-.1-2.7-.4-3.9H24v7.4h12.7c-.5 3.1-2.3 5.8-4.9 7.6l7.5 5.8c4.4-4 7-9.9 7-16.9z" />
+      <path fill="#FBBC05"
+        d="M9.8 28.9c-.6-1.7-1-3.5-1-5.4s.4-3.7 1-5.4l-7.2-5.6C.9 15.8 0 19.8 0 23.5s.9 7.7 2.6 11z" />
+      <path fill="#4285F4"
+        d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.6 0-12.3-3.9-14.2-9.4l-7.2 5.6C6.5 42.6 14.6 48 24 48z" />
+    </svg>
+    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Google</span>
+  </button>
+
+  <!-- FACEBOOK -->
+  <button
+    class="flex items-center justify-center px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg
+           hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+    <svg class="h-5 w-5 mr-2 text-[#1877F2]" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.31h3.59l-.467 3.696h-3.123V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
+    </svg>
+    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Facebook</span>
   </button>
 </div>
 
+                </div>
             </div>
-            <div class="lg:col-span-4 sticky top-8">
+            <div class="hidden lg:block relative group overflow-hidden rounded-xl">
+                <img alt="Stylish fashion lifestyle"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="../image/login.png" />
                 <div
-                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-8 shadow-sm">
-                    <h2 class="text-xl font-bold mb-6">Cart Total</h2>
-                    <div class="space-y-4 mb-8">
-                        <div class="border border-slate-100 dark:border-slate-800 rounded-xl p-4 text-center">
-                            <p class="text-sm font-medium">Bank Offer 5% Cashback</p>
-                        </div>
-                        <div
-                            class="border border-slate-100 dark:border-slate-800 rounded-xl p-4 flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 flex items-center justify-center bg-slate-50 dark:bg-slate-800 rounded-lg">
-                                <span class="material-icons-outlined text-slate-400">local_shipping</span>
-                            </div>
-                            <div>
-                                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Free</p>
-                                <p class="text-sm font-semibold">Enjoy The Product</p>
-                            </div>
-                        </div>
-                        <div
-                            class="border border-slate-100 dark:border-slate-800 rounded-xl p-4 flex items-start gap-4">
-                            <div
-                                class="w-12 h-12 flex items-center justify-center bg-slate-50 dark:bg-slate-800 rounded-lg shrink-0">
-                                <span class="material-icons-outlined text-slate-400">inventory_2</span>
-                            </div>
-                            <div>
-                                <p class="text-sm font-semibold mb-1">Enjoy The Product</p>
-                                <p class="text-xs text-slate-500 leading-relaxed">Fast delivery and premium packaging
-                                    included for all items.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="flex items-center gap-2 mb-6 p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg text-emerald-700 dark:text-emerald-400">
-                        <span class="material-icons-outlined text-sm">check_circle</span>
-                        <p class="text-sm font-medium">You will save $50.00 on this order</p>
-                    </div>
-                    <div
-                        class="border-t border-slate-100 dark:border-slate-800 pt-6 mb-8 flex justify-between items-center">
-                        <span class="text-slate-500 font-medium">Total</span>
-                        <span class="text-2xl font-bold">$125.75</span>
-                    </div>
-                    <a href="./checkout.html"
-                        class="hidden md:block text-center w-full py-4 bg-primary text-white rounded-xl font-bold text-lg hover:bg-slate-900 transition-colors uppercase tracking-widest">
-                        Place Order
-                </a>
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-2">Sustainable Fashion</h3>
+                    <p class="text-sm text-gray-200">Discover our new spring collection inspired by nature and modern
+                        elegance.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div
-        class="mobile-sticky-footer md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700 p-4 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
-        <div class="flex items-center justify-between gap-4">
-            <div>
-                <p class="text-xs text-slate-500">Total Price</p>
-                <p class="text-xl font-bold text-primary">$125.75</p>
-            </div>
-            <a href="./checkout.html"
-                class="flex-grow text-center py-3 bg-primary text-white rounded-xl font-bold uppercase tracking-widest text-sm shadow-lg shadow-emerald-500/20 active:scale-95 transition-transform">
-                Place Order
-        </a>
-        </div>
-    </div>
+    </main>
+    <!-- main section stop -->
 
-    <!-- cart main section stop -->
-
-<!-- new arrival for many page  -->
-    <section class="max-w-7xl mx-auto px-4 py-16 lg:py-20 sm:px-6 lg:px-8 ">
-        <div class="flex flex-col items-center mb-10 gap-4">
-            <div>
-                <h2 class="text-3xl md:text-4xl text-center font-bold text-gray-900 dark:text-white mb-2">
-                    New <span class="text-primary">Arrivals</span>
-                </h2>
-                <p>Browse The Collection of Top Products</p>
-            </div>
-
-        </div>
-        <div class="swiper productSwiper">
-            <div class="swiper-wrapper">
-
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="group relative flex flex-col cursor-pointer">
-                        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#D97706]/20">
-                            <img alt="Sophisticated Swagger Suit"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                                src="../image/product/product-9.png" />
-                            <div class="absolute top-4 left-4"><span
-                                    class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
-                                    20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
-                                </a>
-
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
-                                </a>
-                            </div>
-
-                            <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
-                                    View Details
-                                </a>
-                            </div>s
-                        </div>
-                        <div class="mt-4 flex justify-between items-start">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
-                                Sophisticated<br />Swagger Suit</h3>
-                            <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <div class="group relative flex flex-col cursor-pointer">
-                        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#3B82F6]/20">
-                            <img alt="Classic Denim Skinny Jeans"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                                src="../image/product/product-3.png" />
-                            <div class="absolute top-4 left-4"><span
-                                    class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
-                                    20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
-                                </a>
-
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
-                                </a>
-                            </div>
-
-                            <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
-                                    View Details
-                                </a>
-                            </div>s
-                        </div>
-                        <div class="mt-4 flex justify-between items-start">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Classic Denim
-                                Skinny<br />Jeans</h3>
-                            <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="group relative flex flex-col cursor-pointer">
-                        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#D97706]/20">
-                            <img alt="Sophisticated Swagger Suit"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                                src="../image/product/product-4.png" />
-                            <div class="absolute top-4 left-4"><span
-                                    class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
-                                    20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
-                                </a>
-
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
-                                </a>
-                            </div>
-
-                            <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
-                                    View Details
-                                </a>
-                            </div>s
-                        </div>
-                        <div class="mt-4 flex justify-between items-start">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">
-                                Sophisticated<br />Swagger Suit</h3>
-                            <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="group relative flex flex-col cursor-pointer">
-                        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#EF4444]/20">
-                            <img alt="Athletic Mesh Sports Leggings"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                                src="../image/product/product-7.png" />
-                            <div class="absolute top-4 left-4"><span
-                                    class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
-                                    20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
-                                </a>
-
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
-                                </a>
-                            </div>
-
-                            <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
-                                    View Details
-                                </a>
-                            </div>s
-                        </div>
-                        <div class="mt-4 flex justify-between items-start">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Athletic Mesh
-                                Sports<br />Leggings</h3>
-                            <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <div class="group relative flex flex-col cursor-pointer">
-                        <div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#94A3B8]/20">
-                            <img alt="Vintage Denim Overalls"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                                src="../image/product/product-12.png" />
-                            <div class="absolute top-4 left-4"><span
-                                    class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 rounded shadow-sm">Get
-                                    20% Off</span></div>
-                            View Detail <div class="absolute top-4 right-4 flex flex-col gap-2">
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">favorite</span>
-                                </a>
-
-                                <a href="#"
-                                    class="w-10 h-10 flex items-center justify-center bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-full text-gray-900 dark:text-white hover:bg-primary hover:text-white transition-colors duration-200 shadow-lg">
-                                    <span class="material-symbols-outlined">shopping_bag</span>
-                                </a>
-                            </div>
-
-                            <div
-                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <a href="./productdetails.html"
-                                    class="block w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm shadow-xl text-center hover:bg-primary/90 transition">
-                                    View Details
-                                </a>
-                            </div>s
-                        </div>
-                        <div class="mt-4 flex justify-between items-start">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Vintage
-                                Denim<br />Overalls Shorts</h3>
-                            <p class="text-base font-bold text-slate-900 dark:text-white">$80</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-<!-- new arrival for many page stop -->
 
 
     <!-- using all page -->
@@ -825,8 +488,6 @@
     </footer>
     <!-- footer section stop -->
 
-
-    <!--***** sheard section for all page toggle category mobile and desktop ******  -->
     <!-- ================== MOBILE BOTTOM NAV ================== -->
     <section
         class="xl:hidden fixed z-50 bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 pb-4 pt-3 px-4 flex justify-between items-center">
@@ -863,8 +524,9 @@
     <!-- ================== BACKDROP ================== -->
     <div id="appBackdrop"
         class="fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300"
-        aria-hidden="true">
-    </div>
+        aria-hidden="true"></div>
+
+
     <!-- ================== CATEGORY DRAWER ================== -->
     <section id="catDrawer" data-drawer="category" role="dialog" aria-modal="true" aria-hidden="true" class="fixed z-50 bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800
   left-0 bottom-0 w-9/12 sm:w-1/2 md:w-1/3 lg:w-1/4
@@ -1007,17 +669,10 @@
         </div>
     </section>
 
-
-
-
-
     <!-- ================== SCRIPT ================== -->
 
     <script src="../js/home.js"></script>
-    <script src="../js/product.js"></script>
     <script src="../js/global.js"></script>
-    <script src="../js/productdetails.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

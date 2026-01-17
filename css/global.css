@@ -5,6 +5,44 @@
             letter-spacing: 0.2em;
         }
 
+        /* index.css for toggle smooth durection */
+        /* BACKDROP */
+#appBackdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+}
+
+#appBackdrop.backdrop-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* DRAWER (BOTTOM → TOP on mobile, LEFT → RIGHT on desktop) */
+[data-drawer] {
+  transform: translateY(100%);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  [data-drawer] {
+    transform: translateX(-100%);
+  }
+}
+
+/* OPEN STATE */
+[data-drawer].drawer-open {
+  transform: translateY(0);
+}
+
+@media (min-width: 1280px) {
+  [data-drawer].drawer-open {
+    transform: translateX(0);
+  }
+}
+        /* index.css for toggle smooth durection stop*/
     .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         font-size: 20px;

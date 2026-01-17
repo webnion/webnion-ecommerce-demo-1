@@ -17,44 +17,76 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.openDrawer = function (type) {
-      const drawer = getDrawer(type);
-      if (!drawer) return;
+  const drawer = getDrawer(type);
+  if (!drawer) return;
 
-      // close any currently-open drawer first
-      window.closeDrawer();
+  window.closeDrawer();
 
-      activeType = type;
-      lastFocusedEl = document.activeElement;
+  activeType = type;
+  lastFocusedEl = document.activeElement;
 
-      // open with animation
-      backdrop.classList.add("backdrop-open");
-      drawer.classList.add("drawer-open");
-      drawer.setAttribute("aria-hidden", "false");
+  // IMPORTANT: unhide first
+  backdrop.classList.remove("hidden");
+  drawer.classList.remove("hidden");
 
-      lockScroll(true);
+  requestAnimationFrame(() => {
+    backdrop.classList.add("backdrop-open");
+    drawer.classList.add("drawer-open");
+    drawer.setAttribute("aria-hidden", "false");
+  });
 
-      // focus close button
-      const closeBtn = drawer.querySelector("[data-close]");
-      if (closeBtn) closeBtn.focus();
-    };
+  lockScroll(true);
 
-    window.closeDrawer = function () {
-      if (!activeType) return;
+  const closeBtn = drawer.querySelector("[data-close]");
+  if (closeBtn) closeBtn.focus();
+};
 
-      const drawer = getDrawer(activeType);
-      if (drawer) {
-        drawer.classList.remove("drawer-open");
-        drawer.setAttribute("aria-hidden", "true");
-      }
+window.openDrawer = function (type) {
+  const drawer = getDrawer(type);
+  if (!drawer) return;
 
-      backdrop.classList.remove("backdrop-open");
-      lockScroll(false);
+  window.closeDrawer();
 
-      if (lastFocusedEl) lastFocusedEl.focus();
+  activeType = type;
+  lastFocusedEl = document.activeElement;
 
-      activeType = null;
-      lastFocusedEl = null;
-    };
+  backdrop.classList.remove("hidden");
+  drawer.classList.remove("hidden");
+
+  requestAnimationFrame(() => {
+    backdrop.classList.add("backdrop-open");
+    drawer.classList.add("drawer-open");
+    drawer.setAttribute("aria-hidden", "false");
+  });
+
+  lockScroll(true);
+
+  const closeBtn = drawer.querySelector("[data-close]");
+  if (closeBtn) closeBtn.focus();
+};
+
+window.closeDrawer = function () {
+  if (!activeType) return;
+
+  const drawer = getDrawer(activeType);
+  if (!drawer) return;
+
+  drawer.classList.remove("drawer-open");
+  backdrop.classList.remove("backdrop-open");
+
+  lockScroll(false);
+
+  setTimeout(() => {
+    drawer.classList.add("hidden");
+    backdrop.classList.add("hidden");
+  }, 300); // same as CSS duration
+
+  if (lastFocusedEl) lastFocusedEl.focus();
+
+  activeType = null;
+  lastFocusedEl = null;
+};
+
 
     // Buttons
     document.addEventListener("click", (e) => {
