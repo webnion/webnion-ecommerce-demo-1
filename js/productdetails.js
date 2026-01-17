@@ -76,7 +76,7 @@
     });
   });
 
-// related product slider 
+// product slider 
   document.addEventListener("DOMContentLoaded", () => {
     new Swiper(".productSwiper", {
       loop: true,                 
@@ -86,6 +86,7 @@
       autoplay: {
         delay: 2000,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
       breakpoints: {
         0:    { slidesPerView: 1, spaceBetween: 32 },
@@ -94,4 +95,3 @@
       },
     });
   });
-
